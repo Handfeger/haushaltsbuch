@@ -1,19 +1,13 @@
 {
-  "name": "Haushaltsbuch",
-  "description": "Ein Haushaltsbuch, in das Vera und ich unsere Ausgaben eintragen",
-  "author": "Michel Vielmetter <node@michelvielmetter.de>",
+  "name": "application-name",
   "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
-    "connect": "1.8.5",
-    "express": "2.5.2",
-    "jade": "0.20.0",
-    "mongoose": "2.4.8",
-    "socket.io": "0.8.7"
-  },
-  "devDependencies": {
-    "vows": "0.5.x",
-	"mocha": "*",
-	"should": "*"
-  },
-  "engine": "node >= 0.6.6"
+    "express": "3.3.8",
+    "jade": "*",
+    "less-middleware": "*"
+  }
 }
