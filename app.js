@@ -30,6 +30,19 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Compatible
+
+// Now less files with @import 'whatever.less' will work(https://github.com/senchalabs/connect/pull/174)
+var TWITTER_BOOTSTRAP_PATH = './vendor/twitter/bootstrap/less';
+express.compiler.compilers.less.compile = function(str, fn){
+  try {
+    var less = require('less');var parser = new less.Parser({paths: [TWITTER_BOOTSTRAP_PATH]});
+    parser.parse(str, function(err, root){fn(err, root.toCSS());});
+  } catch (err) {fn(err);}
+}
+
+// Routes
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 
