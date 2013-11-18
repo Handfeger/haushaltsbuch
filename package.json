@@ -6,11 +6,11 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express"               : "3.3.8",
-    "jade"                  : "*",
-    "less-middleware"       : "*",
-    "twitter-bootstrap-node": "*",
-    "socket.io"             : "*",
-    "socket-io.sessions"    : "*"
+    "express"           : "3.3.8",
+    "jade"              : "*",
+    "less-middleware"   : "*",
+    "socket.io"         : "*",
+    "socket-io.sessions": "*",
+    "mongoose"          : "*"
   }
 }

@@ -5,11 +5,14 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var io = require('socket.io');
 
 var app = express();
+
+// setup all the databases
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -30,22 +33,24 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// Compatible
+// Server y u no listen?
+var server = http.createServer(app);
 
-// Now less files with @import 'whatever.less' will work(https://github.com/senchalabs/connect/pull/174)
-var TWITTER_BOOTSTRAP_PATH = './vendor/twitter/bootstrap/less';
-express.compiler.compilers.less.compile = function(str, fn){
-  try {
-    var less = require('less');var parser = new less.Parser({paths: [TWITTER_BOOTSTRAP_PATH]});
-    parser.parse(str, function(err, root){fn(err, root.toCSS());});
-  } catch (err) {fn(err);}
-}
+io.listen(server);
 
-// Routes
-
-app.get('/', routes.index);
-app.get('/users', user.list);
-
-http.createServer(app).listen(app.get('port'), function(){
+server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+app.get('*', function (req, res) {
+  if (req.session.user === undefined) {
+    console.log('test');
+    req.session.user = require('./backend/user')();
+  }
+});
+
+// Routes
+app.get('/', routes.index);
+app.post('/', routes.login);
+
+

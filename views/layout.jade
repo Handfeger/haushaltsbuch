@@ -2,5 +2,10 @@ doctype 5
 html
   head
     title= title
+    script(src='/socket.io/socket.io.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+  body
+    if loggedIn
+      block content
+    else
+      block login
