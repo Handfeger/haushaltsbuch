@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "UserController.js",
+  "sourceRoot": "",
+  "sources": [
+    "UserController.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;;;;;;;;;;;;;;;;CAAA;CAAA;CAAA;CAAA,CAkBA,CACE,GADI,CAAN;CACE;;;CAAA;CAAA,CAGK,CAAA,CAAL,CAAA,IAAM;CAAiB,EAAD,CAAH,SAAA;CAHnB,IAGK;CAEL;;;;CALA;CAAA,CASS,EAAT,GAAA;CA5BF,GAAA;CAAA"
+}

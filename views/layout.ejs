@@ -28,13 +28,27 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/linker/styles/custom.css">
     <!--STYLES END-->
   </head>
 
   <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Start</a>
+      </div>
+    </nav>
+
     <%- body %>
 
-
+    <div class="container">
+      <hr/>
+      <footer class="footer pull-right">
+        <p class="gray">copyright: Michel Vielmetter</p>
+      </footer>
+    </div>
 
     <!--
         Client-side Templates
@@ -58,6 +72,7 @@
     -->
 
     <!--TEMPLATES-->
+    
     <!--TEMPLATES END-->
 
 
@@ -84,6 +99,11 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/jquery.js"></script>
+    <script src="/linker/js/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

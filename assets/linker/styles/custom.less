@@ -1,0 +1,63 @@
+// Colorsets
+@white: #fff;
+@green: #9ec03b;
+@orange: #f48744;
+@blue: #189eca;
+@gray: #777574;
+@lightGray: #ececec;
+@black: #1c1c1c;
+@darkBlue: #106e8d;
+@darkGray: #4a4a4a;
+@red: #D16565;
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.jumbotron {
+  text-align: center;
+
+  h2 {
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: @gray;
+  }
+}
+
+.container {
+  .gray {
+    color: @gray;
+  }
+
+  .footer {
+    width: 25%;
+
+  }
+}
+
+.form-signin {
+  max-width: 30%;
+  padding: 19px 29px 29px;
+  margin: 20px auto;
+  background-color: @lightGray;
+  border: 1px solid darken(@lightGray, 10%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+  }
+}
