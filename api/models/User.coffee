@@ -6,8 +6,9 @@
 * @docs		:: http://sailsjs.org/#!documentation/models
 ###
 module.exports =
-  attributes:
+  schema: true
 
+  attributes:
     name:
       type: 'string'
       required: true
@@ -20,3 +21,12 @@ module.exports =
 
     encryptedPassword:
       type: 'string'
+
+    toJSON: () ->
+      obj = @toObject()
+      delete obj.password
+      delete obj.confirmation
+      delete obj.encryptedPassword
+      delete obj._csrf
+
+      return obj

@@ -20,7 +20,19 @@ module.exports =
   ###*
   * Action for a new user
   ###
-  new: (req, res) -> res.view()
+  new: (req, res) ->
+    res.view()
+
+  ###*
+  * Action to create a user
+  ###
+  create: (req, res, next) ->
+    User.create req.params.all(), (err, user) ->
+      if err
+        console.log err
+        res.redirect '/user/new'
+
+      res.json user
 
   ###*
   * Overrides for the settings in `config/controllers.js`

@@ -27,6 +27,19 @@
       return res.view();
     },
     /**
+    * Action to create a user
+    */
+
+    create: function(req, res, next) {
+      return User.create(req.params.all(), function(err, user) {
+        if (err) {
+          console.log(err);
+          res.redirect('/user/new');
+        }
+        return res.json(user);
+      });
+    },
+    /**
     * Overrides for the settings in `config/controllers.js`
     * (specific to UserController)
     */
