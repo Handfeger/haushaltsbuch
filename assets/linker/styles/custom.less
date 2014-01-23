@@ -54,10 +54,25 @@ body {
     margin-top: 0;
   }
 
-  input[type="text"], input[type="password"], input[type="email"] {
-    font-size: 16px;
-    height: auto;
-    margin-bottom: 15px;
-    padding: 7px 9px;
+  input {
+    &[type="text"], &[type="password"], &[type="email"] {
+      font-size: 16px;
+      height: auto;
+      margin-bottom: 15px;
+      padding: 7px 9px;
+    }
+
+    &.valid {
+      border-color: @green;
+    }
+
+    &.error {
+      border-color: @red;
+    }
+  }
+
+  label.error {
+    color: @red;
+    padding-bottom: 15px;
   }
 }

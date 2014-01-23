@@ -34,6 +34,20 @@
         delete obj._csrf;
         return obj;
       }
+    },
+    beforeCreate: function(values, next) {
+      if (!values.password || values.password !== values.confirmation) {
+        return next({
+          err: ["Passwörter müssen übereinstimmen"]
+        });
+      }
+      return require('bcrypt').hash(values.password, 10, function(err, encryptedPassword) {
+        if (err) {
+          console.log(util.inspect(err, false, null));
+        }
+        values.encryptedPassword = encryptedPassword;
+        return next();
+      });
     }
   };
 

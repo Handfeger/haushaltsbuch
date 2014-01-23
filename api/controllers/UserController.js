@@ -18,6 +18,10 @@
 
 
 (function() {
+  var util;
+
+  util = require('util');
+
   module.exports = {
     /**
     * Action for a new user
@@ -33,10 +37,79 @@
     create: function(req, res, next) {
       return User.create(req.params.all(), function(err, user) {
         if (err) {
-          console.log(err);
+          console.log(util.inspect(err, false, null));
+          req.session.flash = {
+            err: err
+          };
           res.redirect('/user/new');
         }
-        return res.json(user);
+        return res.redirect("/user/show/" + user.id);
+      });
+    },
+    show: function(req, res, next) {
+      return User.findOne(req.param('id'), function(err, user) {
+        if (err) {
+          console.log(util.inspect(err, false, null));
+          return next(err);
+        }
+        if (!user) {
+          return next();
+        }
+        return res.view({
+          user: user
+        });
+      });
+    },
+    edit: function(req, res, next) {
+      return User.findOne(req.param('id'), function(err, user) {
+        if (err) {
+          console.log(util.inspect(err, false, null));
+          return next(err);
+        }
+        if (!user) {
+          return next('Kein Nutzer gefunden');
+        }
+        return res.view({
+          user: user
+        });
+      });
+    },
+    update: function(req, res, next) {
+      return User.update(req.param('id'), req.params.all(), function(err, user) {
+        if (err || !user) {
+          console.log(util.inspect(err, false, null));
+          return res.redirect("/user/edit/" + (req.param('id')));
+        }
+        return res.redirect("/user/show/" + (req.param('id')));
+      });
+    },
+    index: function(req, res, next) {
+      return User.find(function(err, users) {
+        if (err) {
+          console.log(util.inspect(err, false, null));
+          return next(err);
+        }
+        return res.view({
+          users: users
+        });
+      });
+    },
+    destroy: function(req, res, next) {
+      return User.findOne(req.param('id'), function(err, user) {
+        if (err) {
+          console.log(util.inspect(err, false, null));
+          return next(err);
+        }
+        if (!user) {
+          return next('Kein Nutzer gefunden');
+        }
+        User.destroy(req.param('id'), function(err) {
+          if (err) {
+            console.log(util.inspect(err, false, null));
+            return next(err);
+          }
+        });
+        return res.redirect('/user');
       });
     },
     /**

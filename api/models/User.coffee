@@ -30,3 +30,14 @@ module.exports =
       delete obj._csrf
 
       return obj
+
+  beforeCreate: (values, next) ->
+    if not values.password or values.password isnt values.confirmation
+      return next({err: ["Passwörter müssen übereinstimmen"]})
+
+    require('bcrypt').hash values.password, 10, (err, encryptedPassword) ->
+      if err
+        console.log util.inspect err, false, null
+
+      values.encryptedPassword = encryptedPassword
+      next()

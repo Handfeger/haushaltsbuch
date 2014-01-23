@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "custom.js",
+  "sourceRoot": "",
+  "sources": [
+    "custom.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA;CAAA"
+}
