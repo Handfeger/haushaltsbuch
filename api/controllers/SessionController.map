@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "SessionController.js",
+  "sourceRoot": "",
+  "sources": [
+    "SessionController.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;;;;;;;;;;;;;;;;CAAA;CAAA;CAAA;CAAA,CAkBA,CAEE,GAFI,CAAN;CAEE,CAAQ,CAAA,CAAR,EAAA,GAAS;CACH,EAAD,CAAH,SAAA,GAAA;CADF,IAAQ;CAAR,CAGS,EAAT,GAAA;CAvBF,GAAA;CAAA"
+}
