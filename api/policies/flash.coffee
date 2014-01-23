@@ -3,7 +3,7 @@ module.exports = (req, res, next) ->
 
   return next() if not req.session.flash
 
-  res.locals.flash = _.clone req.session.falsh
+  res.locals.flash = _.clone req.session.flash
   req.session.flash = {}
 
   next()

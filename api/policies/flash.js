@@ -5,7 +5,7 @@
     if (!req.session.flash) {
       return next();
     }
-    res.locals.flash = _.clone(req.session.falsh);
+    res.locals.flash = _.clone(req.session.flash);
     req.session.flash = {};
     return next();
   };
