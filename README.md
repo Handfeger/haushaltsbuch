@@ -1,2 +1,0 @@
-# Haushaltsbuch
-### a Sails application
