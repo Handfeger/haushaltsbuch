@@ -1,210 +1,154 @@
-# Hoodie ✪ power to the frontend! [![Build Status](https://travis-ci.org/hoodiehq/hoodie.js.png?branch=master)](https://travis-ci.org/hoodiehq/hoodie.js)
+# Creating a new Hoodie App
 
-Hoodie is a JavaScript library for the browser.
+## Installation
 
-It offers you the following pieces of functionality right out of the box:
+Please refer to the [install guides for OS X, Linux and Windows](http://hood.ie/#installation).
 
-* user accounts and authentication
-* data storage and sync
-* background tasks
-* sharing
-* emails
-* and so much more
+## Plugins
 
-And here is what it looks like:
+To install a specific plugin, run (in your app's directory):
 
-### user accounts & authentication
+    $ hoodie install <name>
 
-```javascript
-  // user signup
-  hoodie.account.signUp('joe@example.com', 'secret');
+where `<name>` is one of the Hoodie Plugin.
 
-  // user signIn
-  hoodie.account.signIn('joe@example.com', 'secret');
+To uninstall use:
 
-  // user password change
-  hoodie.account.changePassword('secret', 'new_secret');
+    $ hoodie uninstall <name>
 
-  // user name change
-  hoodie.account.changeUsername('secret', 'newusername');
+### List of Hoodie Plugins
 
-  // user signout
-  hoodie.account.signOut();
+* users (installed by default)
+  - user sign up
+  - user sign in
+  - password forget
+  - change username
+  - change password
 
-  // user password reset
-  hoodie.account.resetPassword('joe@example.com');
-```
-
-### store data (it will sync to wherever your users sign in)
-
-```javascript
-
-  // add a new document of type 'task'
-  hoodie.store.add('task', {
-    title: 'build sweetMasterApp tomorrow.'
-  });
-
-  // find all 'task' documents
-  hoodie.store.findAll('task');
-
-  // update a 'task' document
-  hoodie.store.update('task', '123', {
-    done: true
-  });
-
-  // remove a 'task' document
-  hoodie.store.remove('task', '123');
-
-  // listen to and act upon document events
-  hoodie.store.on('add:task', function(object) {
-    alert('new Task added: ' + object.task)
-  });
-```
-
-### Tasks
-
-Tasks get picked up by backend workers in the background. You can think
-of them as special objects that describe specific tasks, for which you
-want backend logic.
-
-If a task has been completed successfully, it gets removed. If there
-is an error, it stays in the task store to be handled or removed.
+* email (installed by default)
+  - send multipart emails
 
 
-```js
-  // start a new task. Once it was finished, the success callback gets
-  // called. If something went wrong, error callback gets called instead
-  hoodie.task.start('message', {to: 'joe', text: 'Do you want to party?'})
-    .then( showMessageSent, showMessageError )
+## Troubleshooting
 
-  // abort a pending task
-  hoodie.task.abort('message', '123')
+In case you get npm permission errors, this is most likely down to the
+fact that you have prior used the 'sudo' command to install node
+modules.
 
-  // restart a pending or aborted task
-  hoodie.task.restart('message', '123', { extraProperty: 'value' })
+`sudo -H npm yourCommand` should fix this. For slightly more detail,
+please check out: [Why you shouldn't use sudo with npm](http://blog.hood.ie/2014/02/why-you-shouldnt-use-sudo-with-npm/)
 
-  // aborted all pending tasks
-  hoodie.task.restartAll()
+Make sure that local-tld got installed correctly
 
-  // restart all pending or aborted tasks
-  hoodie.task.restartAll()
-```
+    $ NODE_PATH=`npm root -g`
+    $ open $NODE_PATH/local-tld
 
-You can also subscribe to the following task events
+Make sure that paths have been set correctly
 
-* start
-* abort
-* error
-* success
+    $ echo $NODE_PATH
+    $ cat ~/Library/LaunchAgents/ie.hood.local-tld-service.plist
 
-```javascript
-  // listen to new tasks
-  hoodie.task.on('start', function (newTask) {});
+In some situations, you may need to manually update `~/Library/LaunchAgents/ie.hood.local-tld-service.plist` to correctly source your Node installation, particularly if you are using a Node version manager, such as `nvm`.
 
-  // task aborted
-  hoodie.task.on('abort', function (abortedTask) {});
-
-  // task could not be completed
-  hoodie.task.on('error', function (errorMessage, task) {});
-
-  // task completed successfully
-  hoodie.task.on('success', function (completedTask) {});
-
-  // all listeners can be filtered by type
-  hoodie.task.on('message:start',   function (newMessageTask, options) {});
-  hoodie.task.on('message:abort',  function (abortedMessageTask, options) {});
-  hoodie.task.on('message:error',   function (errorMessage, messageTask, options) {});
-  hoodie.task.on('message:success', function (completedMessageTask, options) {});
-  hoodie.task.on('message:change',  function (eventName, messageTask, options) {});
-
-  // ... and by type and id
-  hoodie.task.on('message:start:123',   function (newMessageTask, options) {});
-  hoodie.task.on('message:abort:123',  function (abortedMessageTask, options) {});
-  hoodie.task.on('message:error:123',   function (errorMessage, messageTask, options) {});
-  hoodie.task.on('message:success:123', function (completedMessageTask, options) {});
-  hoodie.task.on('message:change:123',  function (eventName, messageTask, options) {});
-```
-
-**note**: if `change` event is `"error"`, the error message gets passed as options.error
-
-
-### publish & share data (work in progress)
-
-```javascript
-
-  // find all 'task' documents and publish them
-  hoodie.store.findAll('task').publish();
-
-  // find all documents that belong to a given user
-  hoodie.user( username ).findAll();
-
-  // find a given task and share it
-  hoodie.store.find('task', '456').share();
-
-  // find a all documents on a given share
-  hoodie.share(shareId).findAll();
-
-  // subscribe to a given share
-  hoodie.share(shareId).subscribe();
-```
-
-### sending emails (work in progress)
-
-```javascript
-
-  // define an email object
-  var magic = hoodie.email.send({
-    to      : ['susan@example.com'],
-    cc      : ['bill@example.com'],
-    subject : 'rule the world',
-    body    : 'we can do it!\nSigned, Joe'
-  });
-
-  magic.done(function(mail) {
-    alert('Mail has been sent to ' + mail.to);
-  });
-
-  magic.fail(function(error) {
-    alert('Sorry, but something went wrong: ' + error.reason);
-  });
-
+Check the output of `$ cat ~/Library/LaunchAgents/ie.hood.local-tld-service.plist` for the following:
 
 ```
-
-But … how does it work?
------------------------
-
-Every app gets its own hoodie. You need to set one up, because that's `whereTheMagicHappens`:
-
-```html
-  <script src="hoodie.js"></script>
-  <script>
-    whereTheMagicHappens = 'https://yourapp.hood.ie';
-    hoodie = new Hoodie(whereTheMagicHappens);
-  </script>
+<key>ProgramArguments</key>
+<array>
+    <string>should equal the output of `$ which node`</string>
+    <string>should equal the output of `$ echo $NODE_PATH` + /local-tld/bin/local-tld-service</string>
+</array>
 ```
 
-For more in-depth documentation, head over to [hood.ie](http://hood.ie).
+If these values aren't correct, you'll need to open `~/Library/LaunchAgents/ie.hood.local-tld-service.plist` in a text editor and update the file with the aforementioned values.
 
-## Contact
+If things do not work, try:
 
-Have a question?
+    $ launchctl unload ~/Library/LaunchAgents/ie.hood.local-tld-service.plist
+    $ launchctl load -Fw ~/Library/LaunchAgents/ie.hood.local-tld-service.plist
 
-* [\#hoodie](http://webchat.freenode.net/?channels=hoodie) on Freenode
-* [@hoodiehq](https://twitter.com/hoodiehq) on Twitter
+If things STILL don't work, try that (but don't tell Jan) ((I saw this! — Jan))
 
-## Contributing to this project
+    $ sudo $NODE_PATH/local-tld/bin/local-tld-troubleshoot
 
-Anyone and everyone is welcome to contribute. Please take a moment to
-review the [guidelines for contributing](CONTRIBUTING.md).
+**Vhosts**
 
-* [Bug reports](CONTRIBUTING.md#bugs)
-* [Feature requests](CONTRIBUTING.md#features)
-* [Pull requests](CONTRIBUTING.md#pull-requests)
+If you find Hoodie interfering with your vhosts, here's a temporary workaround:
 
-License & Copyright
--------------------
+To get your vhosts back: `$ sudo ipfw flush`
 
-Copyright 2012-2014 https://github.com/hoodiehq/ and other contributors
+To get local-tld back: `$ npm install -g local-tld`
 
-Licensed under the Apache License 2.0.
+To find out which state you're in: `$ sudo ipfw list`
+If this includes something like "00100 fwd 127.0.0.1,5999 tcp from any to me dst-port 80 in", local-tld is currently running and might be blocking your vhosts.
+
+## Deploy to Nodejitsu
+
+You need a Nodejitsu account and the `jitsu` tool installed.
+
+Create a new hoodie app:
+
+    $ hoodie new myapp
+
+Start app locally:
+
+    $ cd myapp
+    $ hoodie start
+
+Create a database:
+
+    $ jitsu database create couch myapp
+
+This prints out the URL for your database, something like:
+
+    http://nodejitsudb123456789.iriscouch.com:5984
+
+Go to:
+
+    http://nodejitsudb123456789.iriscouch.com:5984/_utils
+
+In the bottom right, click on "Fix This". Create a new user with the username `admin` and a password of your choice. Remember the password.
+
+Create the Nodejitsu app.
+
+    $ jitsu apps create
+
+Set your database URL as an environment variable:
+
+    $ jitsu env set COUCH_URL http://nodejitsudb1234567890.iriscouch.com:5984
+    $ jitsu env set HOODIE_ADMIN_USER admin
+    $ jitsu env set HOODIE_ADMIN_PASS <yourpassword>
+
+
+`<yourpassword>` is the one you set up two steps ago.
+
+Deploy!
+
+    $ jitsu deploy
+
+(wait a minute)
+
+Go to: `http://myapp.jit.su`
+
+Boom.
+
+## Deploy on a regular Linux/UNIX box:
+
+[See deployment.md](deployment.md)
+
+<!--## Deploy dreamcode tl;dr
+
+    $ hoodie new myapp
+    $ cd myapp
+    $ hoodie start
+
+    $ hoodie remote add nodejitsu
+     - jitsu login
+     - jitsu database create couch myapp
+         - setup couchdb admin
+     - jitsu apps create
+     - jitsu env set COUCH_URL http://...
+     - jitsu env set COUCH_PASS <secret>
+
+    $ hoodie deploy
+     - jitsu deploy-->
