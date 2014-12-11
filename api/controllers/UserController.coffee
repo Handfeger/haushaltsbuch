@@ -79,6 +79,8 @@ module.exports =
 
 
   destroy: (req, res, next) ->
+    console.log req.method
+    return next 'User können nur mit Buttons gelöscht werden!' if req.method isnt 'DELETE'
     User.findOne req.param('id'), (err, user) ->
       if err
         console.log util.inspect err, false, null
@@ -94,8 +96,4 @@ module.exports =
 
       res.redirect '/user'
 
-  ###*
-  * Overrides for the settings in `config/controllers.js`
-  * (specific to UserController)
-  ###
   _config: {}

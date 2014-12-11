@@ -95,6 +95,10 @@
       });
     },
     destroy: function(req, res, next) {
+      console.log(req.method);
+      if (req.method !== 'DELETE') {
+        return next('User können nur mit Buttons gelöscht werden!');
+      }
       return User.findOne(req.param('id'), function(err, user) {
         if (err) {
           console.log(util.inspect(err, false, null));
@@ -112,11 +116,6 @@
         return res.redirect('/user');
       });
     },
-    /**
-    * Overrides for the settings in `config/controllers.js`
-    * (specific to UserController)
-    */
-
     _config: {}
   };
 
