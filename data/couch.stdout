@@ -2158,3 +2158,124 @@ Apache CouchDB has started. Time to relax.
 [info] [<0.23693.0>] 127.0.0.1 - - GET /?hoodieId=so7thm3 200
 [info] [<0.24801.0>] 127.0.0.1 - - GET /?hoodieId=so7thm3 200
 [info] [<0.24875.0>] 127.0.0.1 - - GET /?hoodieId=so7thm3 200
+
+Apache CouchDB has started, time to relax.
+Apache CouchDB 1.6.1 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.31.0>] Apache CouchDB has started on http://127.0.0.1:6003/
+[info] [<0.102.0>] 127.0.0.1 - - GET / 200
+[info] [<0.103.0>] 127.0.0.1 - - HEAD /_users/_all_docs 403
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /_users/_all_docs 200
+[error] [<0.148.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/app.couch: file already exists
+[info] [<0.105.0>] 127.0.0.1 - - PUT /app 412
+[info] [<0.106.0>] 127.0.0.1 - - PUT /app/_security 200
+[info] [<0.107.0>] 127.0.0.1 - - PUT /app/config 409
+[error] [<0.162.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/plugins.couch: file already exists
+[info] [<0.108.0>] 127.0.0.1 - - PUT /plugins 412
+[info] [<0.109.0>] 127.0.0.1 - - PUT /plugins/_security 200
+[info] [<0.110.0>] 127.0.0.1 - - PUT /_config/httpd/authentication_handlers 200
+[info] [<0.113.0>] 127.0.0.1 - - GET / 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.115.0>] 127.0.0.1 - - GET /_users 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /plugins/_all_docs?include_docs=true 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /_db_updates?feed=longpoll&timeout=0 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /_users/_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.116.0>] 127.0.0.1 - - GET /app/ 200
+[info] [<0.129.0>] 127.0.0.1 - - GET /_db_updates?feed=continuous&heartbeat=true 200
+[info] [<0.117.0>] 127.0.0.1 - - GET /plugins/ 200
+[info] [<0.145.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /app//_changes?since=3&feed=continuous&heartbeat=30000 200
+[info] [<0.147.0>] 127.0.0.1 - - GET /plugins//_changes?since=2&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.150.0>] 127.0.0.1 - - GET /plugins/_changes?include_docs=true&since=0 401
+Apache CouchDB has been shutdown.
+Apache CouchDB has been shutdown.
+
+Apache CouchDB has started, time to relax.
+Apache CouchDB 1.6.1 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.31.0>] Apache CouchDB has started on http://127.0.0.1:6003/
+[info] [<0.102.0>] 127.0.0.1 - - GET / 200
+[info] [<0.103.0>] 127.0.0.1 - - HEAD /_users/_all_docs 403
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /_users/_all_docs 200
+[error] [<0.148.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/app.couch: file already exists
+[info] [<0.105.0>] 127.0.0.1 - - PUT /app 412
+[info] [<0.106.0>] 127.0.0.1 - - PUT /app/_security 200
+[info] [<0.107.0>] 127.0.0.1 - - PUT /app/config 409
+[error] [<0.162.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/plugins.couch: file already exists
+[info] [<0.108.0>] 127.0.0.1 - - PUT /plugins 412
+[info] [<0.109.0>] 127.0.0.1 - - PUT /plugins/_security 200
+[info] [<0.110.0>] 127.0.0.1 - - PUT /_config/httpd/authentication_handlers 200
+[info] [<0.113.0>] 127.0.0.1 - - GET / 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.115.0>] 127.0.0.1 - - GET /_users 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /plugins/_all_docs?include_docs=true 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /_db_updates?feed=longpoll&timeout=0 200
+[info] [<0.116.0>] 127.0.0.1 - - GET /_users/_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.145.0>] 127.0.0.1 - - GET /_db_updates?feed=continuous&heartbeat=true 200
+[info] [<0.117.0>] 127.0.0.1 - - GET /app/ 200
+[info] [<0.143.0>] 127.0.0.1 - - GET /plugins/ 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /plugins//_changes?since=3&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.147.0>] 127.0.0.1 - - GET /app//_changes?since=4&feed=continuous&heartbeat=30000 200
+Apache CouchDB is not running.
+Apache CouchDB has been shutdown.
+
+Apache CouchDB has started, time to relax.
+Apache CouchDB 1.6.1 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.31.0>] Apache CouchDB has started on http://127.0.0.1:6003/
+[info] [<0.102.0>] 127.0.0.1 - - GET / 200
+[info] [<0.103.0>] 127.0.0.1 - - HEAD /_users/_all_docs 403
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /_users/_all_docs 200
+[error] [<0.148.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/app.couch: file already exists
+[info] [<0.105.0>] 127.0.0.1 - - PUT /app 412
+[info] [<0.106.0>] 127.0.0.1 - - PUT /app/_security 200
+[info] [<0.107.0>] 127.0.0.1 - - PUT /app/config 409
+[error] [<0.162.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/plugins.couch: file already exists
+[info] [<0.108.0>] 127.0.0.1 - - PUT /plugins 412
+[info] [<0.109.0>] 127.0.0.1 - - PUT /plugins/_security 200
+[info] [<0.110.0>] 127.0.0.1 - - PUT /_config/httpd/authentication_handlers 200
+[info] [<0.113.0>] 127.0.0.1 - - GET / 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /plugins/_all_docs?include_docs=true 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.115.0>] 127.0.0.1 - - GET /_users 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /_db_updates?feed=longpoll&timeout=0 200
+[info] [<0.116.0>] 127.0.0.1 - - GET /app/ 200
+[info] [<0.145.0>] 127.0.0.1 - - GET /_db_updates?feed=continuous&heartbeat=true 200
+[info] [<0.117.0>] 127.0.0.1 - - GET /plugins/ 200
+[info] [<0.143.0>] 127.0.0.1 - - GET /_users/_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true 200
+[info] [<0.147.0>] 127.0.0.1 - - GET /app//_changes?since=5&feed=continuous&heartbeat=30000 200
+[info] [<0.150.0>] 127.0.0.1 - - GET /plugins//_changes?since=4&feed=continuous&heartbeat=30000&include_docs=true 200
+Apache CouchDB is not running.
+Apache CouchDB has been shutdown.
+
+Apache CouchDB has started, time to relax.
+Apache CouchDB 1.6.1 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.31.0>] Apache CouchDB has started on http://127.0.0.1:6003/
+[info] [<0.102.0>] 127.0.0.1 - - GET / 200
+[info] [<0.103.0>] 127.0.0.1 - - HEAD /_users/_all_docs 403
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /_users/_all_docs 200
+[error] [<0.148.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/app.couch: file already exists
+[info] [<0.105.0>] 127.0.0.1 - - PUT /app 412
+[info] [<0.106.0>] 127.0.0.1 - - PUT /app/_security 200
+[info] [<0.107.0>] 127.0.0.1 - - PUT /app/config 409
+[error] [<0.162.0>] Could not open file /Users/mvielmetter/Arbeit/Haushaltsbuch/data/plugins.couch: file already exists
+[info] [<0.108.0>] 127.0.0.1 - - PUT /plugins 412
+[info] [<0.109.0>] 127.0.0.1 - - PUT /plugins/_security 200
+[info] [<0.110.0>] 127.0.0.1 - - PUT /_config/httpd/authentication_handlers 200
+[info] [<0.113.0>] 127.0.0.1 - - GET / 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /plugins/_all_docs?include_docs=true 200
+[info] [<0.115.0>] 127.0.0.1 - - GET /_users 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /_db_updates?feed=longpoll&timeout=0 200
+[info] [<0.116.0>] 127.0.0.1 - - GET /_users/_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.145.0>] 127.0.0.1 - - GET /_db_updates?feed=continuous&heartbeat=true 200
+[info] [<0.117.0>] 127.0.0.1 - - GET /app/ 200
+[info] [<0.143.0>] 127.0.0.1 - - GET /plugins/ 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /plugins//_changes?since=5&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.147.0>] 127.0.0.1 - - GET /app//_changes?since=6&feed=continuous&heartbeat=30000 200
+Apache CouchDB is not running.
+Apache CouchDB has been shutdown.
