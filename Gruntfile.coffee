@@ -26,9 +26,10 @@ module.exports = (grunt) ->
     bower:
       dev:
         options:
+          layout: 'byType'
           targetDir: 'www/assets/vendor'
           bowerOptions:
-            production: false
+            production: yes
 
 
 
@@ -46,6 +47,29 @@ module.exports = (grunt) ->
           ext: '.css'
         ]
 
+    # Lets Style our style
+    autoprefixer:
+      build:
+        expand: yes
+        cwd: 'www/assets/css'
+        src: ['**/*.css']
+        dest: 'www/assets/css'
+
+    cssmin:
+      dev:
+        options:
+          banner: "/* DEV BUILD */\n#{banner}"
+          keepSpecialComments: '*'
+        files:
+          'www/assets/css/style.css': 'www/assets/css/**/*.css'
+
+    coffee:
+      dev:
+        expand: yes
+        cwd: 'src/coffee'
+        src: [ '**/*.coffee' ],
+        dest: 'www/assets/js',
+        ext: '.js'
 
   #grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -53,10 +77,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-bootstrap'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-copy'
-
-  grunt.registerTask 'createBootstrap', () ->
-    try
-      grunt.task.run 'bootstrap'
+  grunt.loadNpmTasks 'grunt-bower-task'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
   grunt.registerTask 'build.dev',
     'Compiles src and cleans up the assets',
@@ -64,7 +87,9 @@ module.exports = (grunt) ->
       'clean'
       'bower:dev'
       'stylus:dev'
+      'autoprefixer'
+      'cssmin:dev'
       'copy'
-      #'coffee'
+      'coffee:dev'
     ]
   #grunt.registerTask 'default', ['uglify']
