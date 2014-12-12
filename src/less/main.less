@@ -1,28 +1,29 @@
-/** DEV BUILD!!! **/
-/*! Haushaltsbuch 12-12-2014
- *  Copyright: Michel Vielmetter <programming@michelvielmetter.de>
- */
+// This is Main Less --- We will destroy you! (Crushed by your own tears when you see my code)
+
 /* ==========================================================================
    Hoodie Sign In / Sign Up / Sign out stylings
    ========================================================================== */
+
 body {
-  /* hide contents until we know if user is signed in or not */
+	/* hide contents until we know if user is signed in or not */
+	.hoodie-account-signedin, .hoodie-account-signedout, .hoodie-account-error {
+		display: none;
+	}
+
 }
-body .hoodie-account-signedin,
-body .hoodie-account-signedout,
-body .hoodie-account-error {
-  display: none;
-}
-html[data-hoodie-account-status=signedin] .hoodie-account-signedin,
-html[data-hoodie-account-status=error] .hoodie-account-error,
+
+html[data-hoodie-account-status=signedin]  .hoodie-account-signedin,
+html[data-hoodie-account-status=error]     .hoodie-account-error,
 html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
-  display: block;
+	display: block;
 }
+
 .hoodie-accountbar {
-  position: absolute;
-  top: 20px;
-  right: 10px;
+	position: absolute;
+	top: 20px;
+	right: 10px;
 }
+
 /*
 ╔===============================================================================================================================================================
 ║
@@ -30,17 +31,19 @@ html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
 ║
 ╚===============================================================================================================================================================
 */
+
 .container {
-  background: #fff;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+	background: #fff;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
 }
+
 .content {
-  padding: 10px;
-  width: 480px;
+	padding: 10px;
+	width: 480px;
 }
-h1,
-h6 {
-  color: #312784;
+
+h1, h6 {
+	color: #312784;
 }
