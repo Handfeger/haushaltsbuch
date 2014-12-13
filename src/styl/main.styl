@@ -5,22 +5,19 @@
    ========================================================================== */
 
 body
-	/* hide contents until we know if user is signed in or not */
-	.hoodie-account-signedin, .hoodie-account-signedout, .hoodie-account-error
-		display: none
+  /* hide contents until we know if user is signed in or not */
+  .hoodie-account-signedin, .hoodie-account-signedout, .hoodie-account-error
+    display: none
 
-
-html[data-hoodie-account-status=signedin]  .hoodie-account-signedin,
-html[data-hoodie-account-status=error]     .hoodie-account-error,
+html[data-hoodie-account-status=signedin] .hoodie-account-signedin,
+html[data-hoodie-account-status=error] .hoodie-account-error,
 html[data-hoodie-account-status=signedout] .hoodie-account-signedout
-	display: block
-
+  display: block
 
 .hoodie-accountbar
-	position: 			absolute
-	top: 				20px
-	right: 				10px
-
+  position: absolute
+  top: 20px
+  right: 10px
 
 /*
 ╔===============================================================================================================================================================
@@ -31,16 +28,25 @@ html[data-hoodie-account-status=signedout] .hoodie-account-signedout
 */
 
 .container
-	background: 		#fff
-	padding: 			0
-	display: 			flex
-	flex-direction: 	column
-
+  background: #fff
+  padding: 0
+  display: flex
+  flex-direction: column
 
 .content
-	padding: 			10px
-	width: 				480px
-
+  padding: 10px
+  width: 480px
 
 h1, h6
-	color: 				#312784
+  color: #312784
+
+footer.container
+  position: fixed
+  bottom: 0
+
+  margin: 0
+  left: 0
+  width: 100%
+
+  background-color: rgba(0,0,0,.1)
+  padding: 0 10px

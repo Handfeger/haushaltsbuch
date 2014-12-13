@@ -1,5 +1,5 @@
 
-/* line 46 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 52 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 
 /* line 1 : /Users/mvielmetter/Arbeit/Haushaltsbuch/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -17,21 +17,21 @@ body .hoodie-account-error {
   display: none;
 }
 
-/* line 13 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 12 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 html[data-hoodie-account-status=signedin] .hoodie-account-signedin,
 html[data-hoodie-account-status=error] .hoodie-account-error,
 html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
   display: block;
 }
 
-/* line 19 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 17 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 .hoodie-accountbar {
   position: absolute;
   top: 20px;
   right: 10px;
 }
 
-/* line 25 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 22 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 /*
 ╔===============================================================================================================================================================
 ║
@@ -40,7 +40,7 @@ html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
 ╚===============================================================================================================================================================
 */
 
-/* line 33 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 30 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 .container {
   background: #fff;
   padding: 0;
@@ -55,14 +55,25 @@ html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
           flex-direction: column;
 }
 
-/* line 40 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 36 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 .content {
   padding: 10px;
   width: 480px;
 }
 
-/* line 45 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 40 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 h1,
 h6 {
   color: #312784;
+}
+
+/* line 43 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+footer.container {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  padding: 0 10px;
 }

@@ -44,6 +44,8 @@
     "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-stylus": "^0.20.0",
     "grunt-contrib-uglify": "^0.6.0",
-    "grunt-hoodie": "^0.5.4"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-hoodie": "^0.5.4",
+    "hoodie-plugin-angularjs": "^0.1.1"
   }
 }

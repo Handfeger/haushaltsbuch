@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="de" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>testtest</title>
+    <title>Haushaltsbuch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -16,14 +16,13 @@
 
         <div class="hoodie-account-signedout">
           <span class="btn-group">
-            <button class="btn btn-small btn-primary" data-hoodie-action="signup">Sign Up</button>
+            <button class="btn btn-small btn-primary" data-hoodie-action="signup">Registrieren</button>
             <button class="btn btn-small dropdown-toggle btn-primary" data-toggle="dropdown">
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu pull-right">
-              <li><a href="#" data-hoodie-action="signin">Sign In</a></li>
-              <li><a href="#" data-hoodie-action="resetpassword">Reset Password</a></li>
-              <li><a href="#" data-hoodie-action="destroy">Clear local data</a></li>
+              <li><a href="#" data-hoodie-action="signin">Anmelden</a></li>
+              <li><a href="#" data-hoodie-action="resetpassword">Passwort zurücksetzen</a></li>
             </ul>
           </span>
         </div><!-- /.hoodie-account-signedout -->
@@ -32,14 +31,13 @@
           Hello,
           <span class="hoodie-username"><!-- usern name will be filled in here --></span>
           <span class="btn-group">
-            <button class="btn btn-small btn-primary" data-hoodie-action="signout">Sign Out</button>
+            <button class="btn btn-small btn-primary" data-hoodie-action="signout">Abmelden</button>
             <button class="btn btn-small dropdown-toggle btn-primary" data-toggle="dropdown">
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu pull-right">
-              <li><a href="#" data-hoodie-action="changepassword">Change Password</a></li>
-              <li><a href="#" data-hoodie-action="changeusername">Change Username</a></li>
-              <li><a href="#" data-hoodie-action="destroy">Destroy Account</a></li>
+              <li><a href="#" data-hoodie-action="changepassword">Passwort ändern</a></li>
+              <li><a href="#" data-hoodie-action="changeusername">Namen ändern</a></li>
             </ul>
           </span>
         </div><!-- /.hoodie-account-signedin -->
@@ -64,11 +62,22 @@
         <h1>Haushaltsbuch</h1>
       </header>
 
-      <section>
+      <section class="hoodie-account-signedout">
         <p>Bitte einloggen!</p>
       </section>
 
-      <footer>
+      <section class="container hoodie-account-signedin">
+        <div class="container">
+          <h2>Neuer Eintrag</h2>
+          <form class="inline-form" role="form">
+            <div class="form-group">
+
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="container">
        <h6>Entwickelt mit <a href="http://hood.ie">Hoodie!</a></h6>
       </footer>
     </div> <!-- /.container -->
@@ -77,11 +86,12 @@
 
     <script src="assets/vendor/jquery/jquery.js"></script>
     <script src="assets/vendor/bootstrap/bootstrap.js"></script>
+    <script src="assets/vendor/angular/angular.js"></script>
+
     <!-- Load the dynamic version of hoodie.js that includes all the plugin code-->
     <script src="/_api/_files/hoodie.js"></script>
 
-    <script src="assets/vendor/js/hoodie.accountbar.bootstrap.js"></script>
-    <script src="assets/vendor/bootstrap.modalform.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/vendor/vendor.js"></script>
+    <script src="assets/js/application.js"></script>
   </body>
 </html>

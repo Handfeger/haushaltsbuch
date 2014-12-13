@@ -1,6 +1,6 @@
-/* DEV BUILD */
-/*! Haushaltsbuch 12-12-2014
+/* DEV BUILD*/
+/*! Haushaltsbuch 13-12-2014
  *  Copyright: Michel Vielmetter <programming@michelvielmetter.de>
  */
 
-body .hoodie-account-error,body .hoodie-account-signedin,body .hoodie-account-signedout{display:none}html[data-hoodie-account-status=error] .hoodie-account-error,html[data-hoodie-account-status=signedin] .hoodie-account-signedin,html[data-hoodie-account-status=signedout] .hoodie-account-signedout{display:block}.hoodie-accountbar{position:absolute;top:20px;right:10px}.container{background:#fff;padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.content{padding:10px;width:480px}h1,h6{color:#312784}
+body .hoodie-account-error,body .hoodie-account-signedin,body .hoodie-account-signedout{display:none}html[data-hoodie-account-status=error] .hoodie-account-error,html[data-hoodie-account-status=signedin] .hoodie-account-signedin,html[data-hoodie-account-status=signedout] .hoodie-account-signedout{display:block}.hoodie-accountbar{position:absolute;top:20px;right:10px}.container{background:#fff;padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.content{padding:10px;width:480px}h1,h6{color:#312784}footer.container{position:fixed;bottom:0;margin:0;left:0;width:100%;background-color:rgba(0,0,0,.1);padding:0 10px}
