@@ -1,0 +1,25 @@
+<form name="newEntryForm" class="inline-form" role="form" ng-submit="newEntryForm.$valid && newEntryCtrl.add()" novalidate>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input class="form-control" type="date" name="date" ng-model="newEntryCtrl.entry.date" required/>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="number" name="price" ng-model="newEntryCtrl.entry.price" required/>
+        </div>
+        <div class="col-sm-2">
+            <input class="form-control" type="text" name="subject" ng-model="newEntryCtrl.entry.subject"/>
+        </div>
+        <div class="col-sm-1">
+            <div class="toggle-switch toggle-switch-success">
+                <label>
+                    <input class="form-control" type="checkbox" name="together" ng-model="newEntryCtrl.entry.together"/>
+                    <div class="toggle-switch-inner"></div>
+                    <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <input class="btn btn-primary" type="submit" name="submit" value="+" ng-disabled="!newEntryForm.$valid"/>
+        </div>
+    </div>
+</form>

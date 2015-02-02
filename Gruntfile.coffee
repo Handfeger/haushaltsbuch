@@ -20,11 +20,21 @@ module.exports = (grunt) ->
         cwd: 'src/html'
         src: ['**']
         dest: 'www'
+      images:
+        expand: yes
+        cwd: 'src/img'
+        src: ['**']
+        dest: 'www/assets/img'
       vendor:
         expand: yes
         cwd: 'vendor'
         src: ['**']
         dest: 'www/assets/vendor'
+      'scripts.dev':
+        expand: yes
+        cwd: 'src/coffee'
+        src: ['**'],
+        dest: 'www/dev/coffee',
 
     # Vendor: Install bower packages
     bower:
@@ -69,22 +79,45 @@ module.exports = (grunt) ->
 
     coffee:
       dev:
+        options:
+          sourceMap: yes
         expand: yes
-        cwd: 'src/coffee'
+        cwd: 'www/dev/coffee'
         src: [ '**/*.coffee' ],
         dest: 'www/assets/js',
         ext: '.js'
 
     uglify:
-      dev:
+      prod:
         options:
           mangle: false
-          banner: "/* DEV BUILD*/\n#{banner}"
-          sourceMap: yes
-          preserveComments: 'all'
+          banner: banner
+          sourceMap: no
         files:
           'www/assets/js/application.js': ['www/assets/js/**/*.js']
-          'www/assets/vendor/vendor.js': ['www/assets/vendor/js/**/*.js']
+          'www/assets/vendor/vendor.js': ['www/assets/vendor/vendor.js']
+
+    concat:
+      'vendor.beforeHoodie':
+        src: [
+          'www/assets/vendor/jquery/*.js'
+          'www/assets/vendor/angular/*.js'
+          'www/assets/vendor/angular-translate/*.js'
+          'www/assets/vendor/ng-table/*.js'
+          'www/assets/vendor/bootstrap/*.js'
+          'www/assets/vendor/raphael/*.js'
+        ]
+        dest: 'www/assets/vendor/vendor.before.js'
+      'vendor.afterHoodie':
+        src: [
+          'www/assets/vendor/js/*.js'
+        ]
+        dest: 'www/assets/vendor/vendor.after.js'
+      dev:
+        options:
+          sourceMap: no
+        files:
+          'www/assets/js/application.js': ['www/assets/js/**/*.js']
 
     watch:
       styles:
@@ -109,21 +142,25 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
 
   grunt.registerTask 'build.dev',
     'Compiles src and cleans up the assets',
     [
       'clean:dev'
       'styles:dev'
-      'copy'
+      'copy:prod'
       'scripts:dev'
+      'concat:vendor.beforeHoodie'
+      'concat:vendor.afterHoodie'
     ]
 
   grunt.registerTask 'scripts:dev', [
     'clean:scripts'
+    'copy:scripts.dev'
     'bower:dev'
     'coffee:dev'
-    'uglify:dev'
+    'concat:dev'
   ]
 
   grunt.registerTask 'styles:dev', [
@@ -131,6 +168,12 @@ module.exports = (grunt) ->
     'stylus:dev'
     'autoprefixer'
     'cssmin:dev'
+  ]
+
+  grunt.registerTask 'copy:prod', [
+    'copy:html'
+    'copy:images'
+    'copy:vendor'
   ]
 
   grunt.registerTask 'default', [

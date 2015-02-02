@@ -1,5 +1,5 @@
 
-/* line 52 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 2397 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 
 /* line 1 : /Users/mvielmetter/Arbeit/Haushaltsbuch/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -41,36 +41,3436 @@ html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
 */
 
 /* line 30 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
-.container {
-  background: #fff;
-  padding: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+body {
+  color: #525252;
+  background: #6aa6d6 url("../img/devoops_pattern_b10.png") 0 0 repeat;
 }
 
-/* line 36 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
-.content {
-  padding: 10px;
-  width: 480px;
+/* line 34 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.body-expanded,
+.modal-open {
+  overflow-y: hidden;
+  margin-right: 15px;
 }
 
-/* line 40 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+/* line 38 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.modal-open #content {
+  z-index: inherit;
+}
+
+/* line 39 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.body-expanded .expanded-panel,
+.fancybox-margin .expanded-panel,
+.modal-open .expanded-panel {
+  margin-right: 15px;
+}
+
+/* line 42 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.body-screensaver {
+  overflow: hidden;
+}
+
+/* line 45 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
 h1,
-h6 {
-  color: #312784;
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin: 0;
 }
 
-/* line 43 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
-footer.container {
-  position: fixed;
-  bottom: 0;
+/* line 48 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#logo {
+  position: relative;
+  background: #525252 url("../img/devoops_pattern_b10.png") 0 0 repeat;
+}
+
+/* line 52 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#logo a {
+  color: #fff;
+  font-family: 'Righteous', cursive;
+  display: block;
+  font-size: 20px;
+  line-height: 50px;
+  background: url("../img/logo.png") right 42px no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 64 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#logo a:hover {
+  background-position: right 25px;
+  text-decoration: none;
+}
+
+/* line 68 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.navbar {
   margin: 0;
+  border: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
+  border-radius: 0;
+  box-shadow: 0 1px 2px #272727;
+  z-index: 2000;
+}
+
+/* line 81 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.body-expanded .navbar {
+  z-index: 9;
+}
+
+/* line 84 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+a.show-sidebar {
+  float: left;
+  color: #6d6d6d;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 93 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+a.show-sidebar:hover {
+  color: #000;
+}
+
+/* line 96 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#sidebar-left {
+  position: relative;
+  z-index: inherit;
+  padding-bottom: 3000px !important;
+  margin-bottom: -3000px !important;
+  background: #6aa6d6 url("../img/devoops_pattern_b10.png") 0 0 repeat;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 107 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#content {
+  position: relative;
+  z-index: 10;
+  background: #ebebeb;
+  box-shadow: 0 0 6px #131313;
+  padding-bottom: 3000px !important;
+  margin-bottom: -2980px !important;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 120 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.full-content {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 125 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu,
+.nav.msg-menu {
+  margin: 0 -15px;
+}
+
+/* line 128 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu > li > a,
+.nav.msg-menu > li > a {
+  text-align: center;
+  color: #f0f0f0;
+  min-height: 40px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 137 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background: rgba(0,0,0,0.1);
+}
+
+/* line 140 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu > li > a:hover,
+.nav.main-menu > li > a:focus,
+.nav.main-menu > li.active > a,
+.nav.main-menu .open > a,
+.nav.main-menu .open > a:hover,
+.nav.main-menu .open > a:focus,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li.active > a,
+.nav.msg-menu > li > a:hover,
+.nav.msg-menu > li > a:focus,
+.nav.msg-menu > li.active > a,
+.nav.msg-menu .open > a,
+.nav.msg-menu .open > a:hover,
+.nav.msg-menu .open > a:focus {
+  background: rgba(0,0,0,0.1);
+  color: #f0f0f0;
+}
+
+/* line 145 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu a.active,
+.nav.msg-menu a.active {
+  background: rgba(0,0,0,0.2);
+}
+
+/* line 148 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu a.active:hover,
+.nav.msg-menu a.active:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+/* line 151 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu a.active-parent,
+.nav.msg-menu a.active-parent {
+  background: rgba(0,0,0,0.3);
+}
+
+/* line 154 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu a.active-parent:hover,
+.nav.msg-menu a.active-parent:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+/* line 157 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav.main-menu > li > a > i,
+.nav.msg-menu > li > a > i {
+  font-size: 18px;
+  width: auto;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 164 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .dropdown-menu {
+  position: absolute;
+  z-index: 2001;
+  left: 100%;
+  top: 0;
+  float: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  padding: 0;
+  background: #6aa6d6 url("../img/devoops_pattern_b10.png") 0 0 repeat;
+  box-shadow: none;
+  visibility: hidden;
+}
+
+/* line 180 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .active-parent:hover + .dropdown-menu {
+  visibility: visible;
+}
+
+/* line 183 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .active-parent + .dropdown-menu:hover {
+  visibility: visible;
+}
+
+/* line 186 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .dropdown-menu > li > a {
+  padding: 9px 15px 9px 40px;
+  color: #f0f0f0;
+}
+
+/* line 190 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .dropdown-menu > li:first-child > a {
+  border-radius: 0 4px 0 0;
+}
+
+/* line 195 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.main-menu .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 4px 0;
+}
+
+/* line 200 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#top-panel {
+  line-height: 50px;
+  height: 50px;
+  background: #ebebeb;
+}
+
+/* line 205 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#main {
+  margin-top: 50px;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+/* line 210 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#search {
+  position: relative;
+  margin-left: 20px;
+}
+
+/* line 214 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#search > input {
+  width: 80%;
+  background: #dfdfdf;
+  border: 1px solid #c7c7c7;
+  text-shadow: 0 1px 1px #eee;
+  border-radius: 3px;
+  color: #686868;
+  line-height: 1em;
+  height: 30px;
+  padding: 0 35px 0 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 231 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#search > input + i {
+  opacity: 0;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* line 242 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#search > input:focus {
+  width: 100%;
+  outline: none;
+}
+
+/* line 246 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#search > input:focus + i {
+  opacity: 1;
+}
+
+/* line 249 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu {
+  margin: 0;
+}
+
+/* line 252 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.top-panel-right {
+  padding-left: 0;
+}
+
+/* line 255 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu > li > a {
+  padding: 0 5px 0 10px;
+  line-height: 50px;
+}
+
+/* line 259 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu > li > a:hover {
+  background: none;
+}
+
+/* line 262 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu a.account {
+  height: 50px;
+  padding: 5px 0 5px 10px;
+  line-height: 18px;
+}
+
+/* line 267 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu i {
+  margin-top: 8px;
+  padding: 5px;
+  font-size: 20px;
+  color: #7bc5d3;
+  line-height: 1em;
+  vertical-align: top;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 284 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu > li > a:hover > i {
+  background: #f5f5f5;
+}
+
+/* line 287 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu i.pull-right {
+  color: #000;
+  border: 0;
+  box-shadow: none;
+  font-size: 16px;
+  background: none !important;
+}
+
+/* line 294 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu .badge {
+  margin-top: 3px;
+  padding: 3px 6px;
+  vertical-align: top;
+  background: #cea9a9;
+}
+
+/* line 300 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.avatar {
+  width: 40px;
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 305 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.avatar > img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+}
+
+/* line 310 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.user-mini > span {
+  display: block;
+  font-size: 12px;
+  color: #363636;
+  margin-bottom: -4px;
+}
+
+/* line 316 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.user-mini > span.welcome {
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* line 320 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu .dropdown-menu {
+  position: absolute !important;
+  background: rgba(0,0,0,0.7) !important;
+  padding: 0;
+  border: 0;
+  right: 0;
+  left: auto;
+  min-width: 100%;
+}
+
+/* line 329 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu .dropdown-menu > li > a {
+  padding: 5px 10px !important;
+  color: #f0f0f0;
+}
+
+/* line 333 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.panel-menu .dropdown-menu > li > a > i {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 343 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.well {
+  padding: 15px;
+}
+
+/* line 346 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box {
+  display: block;
+  z-index: 1999;
+  position: relative;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0 0 4px #d8d8d8;
+  background: transparent;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+/* line 358 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.full-content .box {
+  border: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* line 365 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-header {
+  border-radius: 3px 3px 0 0;
+  color: #363636;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e4e4e4;
+  height: 28px;
+}
+
+/* line 377 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-name,
+.modal-header-name {
+  padding-left: 15px;
+  line-height: 28px;
+}
+
+/* line 381 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-name:hover {
+  cursor: move;
+}
+
+/* line 384 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-name > i {
+  margin-right: 5px;
+}
+
+/* line 387 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+
+/* line 393 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-move {
+  display: none;
+}
+
+/* line 396 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.expanded .no-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+}
+
+/* line 405 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-content {
+  position: relative;
+  border-radius: 0 0 3px 3px;
+  padding: 15px;
+  background: #fcfcfc;
+}
+
+/* line 413 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-content.dropbox,
+.box-content.sortablebox {
+  overflow: hidden;
+}
+
+/* line 416 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.full-content .box-content {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 423 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-icons a {
+  cursor: pointer;
+  text-decoration: none !important;
+  border-left: 1px solid #fafafa;
+  height: 26px;
+  line-height: 26px;
+  width: 28px;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #b8b8b8 !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 439 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-icons a.beauty-table-to-json {
+  width: auto;
   padding: 0 10px;
+  font-size: 14px;
+}
+
+/* line 444 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-icons a:hover {
+  box-shadow: inset 0 0 1px 0 #cecece;
+}
+
+/* line 447 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.expanded a.close-link {
+  display: none;
+}
+
+/* line 450 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#sidebar-left.col-xs-2 {
+  opacity: 0;
+  width: 0%;
+  padding: 0;
+}
+
+/* line 455 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.sidebar-show #sidebar-left.col-xs-2 {
+  opacity: 1;
+  width: 16.666666666666664%;
+  padding: 0 15px;
+}
+
+/* line 460 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.sidebar-show #content.col-xs-12 {
+  opacity: 1;
+  width: 83.33333333333334%;
+}
+
+/* line 464 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.expanded {
+  overflow-y: scroll;
+  border: 0;
+  z-index: 3000 !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  background: rgba(0,0,0,0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 480 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.expanded-padding {
+  background: rgba(0,0,0,0.7);
+  padding: 50px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 488 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* line 491 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.padding-15 {
+  padding: 15px !important;
+}
+
+/* line 494 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-padding .table-bordered {
+  border: 0;
+  margin: 0;
+}
+
+/* line 498 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-padding .table-bordered thead tr th:first-child,
+.no-padding .table-bordered tbody tr th:first-child,
+.no-padding .table-bordered tfoot tr th:first-child,
+.no-padding .table-bordered thead tr td:first-child,
+.no-padding .table-bordered tbody tr td:first-child,
+.no-padding .table-bordered tfoot tr td:first-child {
+  border-left: 0px !important;
+}
+
+/* line 501 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-padding .table-bordered thead tr th:last-child,
+.no-padding .table-bordered tbody tr th:last-child,
+.no-padding .table-bordered tfoot tr th:last-child,
+.no-padding .table-bordered thead tr td:last-child,
+.no-padding .table-bordered tbody tr td:last-child,
+.no-padding .table-bordered tfoot tr td:last-child {
+  border-right: 0px !important;
+}
+
+/* line 504 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-heading thead tr {
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dfdfdf);
+}
+
+/* line 512 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+table.no-border-bottom tr:last-child td {
+  border-bottom: 0;
+}
+
+/* line 515 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.dataTables_wrapper {
+  overflow: hidden;
+}
+
+/* line 518 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.dataTables_wrapper table.table {
+  clear: both;
+  max-width: inherit;
+  margin-bottom: 0;
+}
+
+/* line 523 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable *,
+.table-datatable :after,
+.table-datatable :before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+/* line 530 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable label {
+  position: relative;
+  display: block;
+  font-weight: 400;
+}
+
+/* line 535 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable tbody td {
+  vertical-align: middle !important;
+}
+
+/* line 538 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable img {
+  margin-right: 10px;
+  border: 1px solid #f8f8f8;
+  width: 40px;
+}
+
+/* line 543 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable .sorting {
+  background: url("../img/sort.png") right center no-repeat;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+/* line 548 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable .sorting_asc {
+  background: url("../img/sort-asc.png") right center no-repeat;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+/* line 553 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-datatable .sorting_desc {
+  background: url("../img/sort-desc.png") right center no-repeat;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+/* line 558 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+div.DTTT_collection_background {
+  z-index: 2002;
+}
+
+/* line 561 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+div.DTTT .btn {
+  color: #333 !important;
+  font-size: 12px;
+}
+
+/* line 565 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu {
+  z-index: 2003;
+  background: rgba(0,0,0,0.7) !important;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  min-width: 157px;
+}
+
+/* line 576 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu li {
+  position: relative;
+}
+
+/* line 579 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 10px !important;
+  color: #f0f0f0 !important;
+}
+
+/* line 585 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu > li:first-child > a {
+  border-radius: 0;
+}
+
+/* line 590 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu > li:last-child > a {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 595 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+ul.DTTT_dropdown.dropdown-menu > li:hover > a {
+  background: rgba(0,0,0,0.3);
+  color: #f0f0f0;
+}
+
+/* line 599 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.dataTables_wrapper input[type="text"] {
+  display: block;
+  width: 90%;
+  height: 26px;
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-appearance: none;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 624 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.dataTables_wrapper input[type="text"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+
+/* line 630 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#breadcrumb {
+  padding: 0;
+  line-height: 40px;
+  background: #525252;
+  background: #5a8db6 url("../img/devoops_pattern_b10.png") 0 0 repeat;
+  margin-bottom: 20px;
+}
+
+/* line 637 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.breadcrumb {
+  padding: 0 15px;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* line 645 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.breadcrumb > li > a {
+  color: #d8d8d8;
+}
+
+/* line 648 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.breadcrumb > li > a:hover,
+.breadcrumb > li:last-child > a {
+  color: #f8f8f8;
+}
+
+/* line 651 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bs-callout {
+  padding: 15px;
+  border-left: 3px solid #525252;
+  background: #dfdfdf;
+}
+
+/* line 656 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #525252;
+}
+
+/* line 661 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.no-padding .bs-callout {
+  border: 0;
+}
+
+/* line 664 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-header {
+  margin: 0 0 10px;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+/* line 668 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-content .page-header,
+legend,
+.full-calendar .page-header {
+  margin: 0 0 10px;
+  border-bottom: 1px dashed #b6b6b6;
+}
+
+/* line 672 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.invoice-header {
+  margin: 0 0 10px;
+  border-bottom: 1px dashed #b6b6b6;
+  display: inline-block;
+}
+
+/* line 677 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-content .form-group,
+.devoops-modal-inner .form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 681 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #525252;
+  background-color: rgba(129,199,199,0.2);
+  border: 1px solid #ebebeb;
+}
+
+/* line 688 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.show-grid [class^="col-"]:hover {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(107,134,182,0.2);
+  border: 1px solid #ebebeb;
+}
+
+/* line 694 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.show-grid,
+.show-grid-forms {
+  margin-bottom: 15px;
+}
+
+/* line 697 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.show-grid-forms [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 701 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th,
+td.beauty-hover {
+  background-color: rgba(219,219,219,0.3) !important;
+}
+
+/* line 706 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.table-hover > tbody > tr:hover > td.beauty-hover:hover {
+  background-color: rgba(219,219,219,0.9) !important;
+}
+
+/* line 709 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.DTTT.btn-group {
+  position: absolute;
+  top: -28px;
+  right: 83px;
+  border-right: 1px solid #dbdbdb;
+}
+
+/* line 715 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.DTTT.btn-group a {
+  border-radius: 0;
+  line-height: 1em;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none !important;
+  padding: 6px 12px;
+  margin: 0;
+  background: #f7f7f7;
+  border: 0;
+}
+
+/* line 729 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#screensaver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  background: #000;
+  display: none;
+}
+
+/* line 739 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#screensaver.show {
+  display: block;
+}
+
+/* line 742 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#canvas {
+  position: relative;
+}
+
+/* line 745 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#screensaver i {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: rgba(255,255,255,0.5);
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 60px;
+  color: rgba(0,0,0,0.8);
+  border-radius: 4px;
+}
+
+/* line 760 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.well pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  white-space: nowrap;
+}
+
+/* line 768 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.well pre code {
+  white-space: normal;
+}
+
+/* line 771 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn {
+  border-width: 1px;
+  border-style: solid;
+  border-width: 1px;
+  text-decoration: none;
+  border-color: rgba(0,0,0,0.3);
+  cursor: pointer;
+  outline: none;
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Segoe UI", Verdana, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #a2a2a2;
+  background: #a2a2a2 -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0));
+  background: #a2a2a2 -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0)));
+  line-height: 24px;
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+  border-radius: 4px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  outline: none !important;
+}
+
+/* line 799 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-label-left,
+.btn-label-right {
+  padding: 0 10px;
+}
+
+/* line 802 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-label-left span {
+  position: relative;
+  left: -10px;
+  display: inline-block;
+  padding: 0px 8px;
+  background: rgba(0,0,0,0.1);
+}
+
+/* line 809 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-label-right span {
+  position: relative;
+  right: -10px;
+  display: inline-block;
+  padding: 0px 8px;
+  background: rgba(0,0,0,0.1);
+}
+
+/* line 816 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn i {
+  vertical-align: middle;
+}
+
+/* line 819 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-app {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* line 825 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-app i {
+  font-size: 36px;
+  line-height: 78px;
+  display: block;
+}
+
+/* line 830 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-app-sm {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 12px;
+}
+
+/* line 836 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-app-sm i {
+  font-size: 18px;
+  line-height: 48px;
+  display: block;
+}
+
+/* line 841 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-circle {
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.25);
+}
+
+/* line 847 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn.active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* line 853 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-default,
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active,
+.progress-bar {
+  background-color: #d8d8d8;
+  border-color: rgba(0,0,0,0.3);
+  color: #929292;
+}
+
+/* line 858 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active,
+.table > thead > tr > td.primary,
+.table > tbody > tr > td.primary,
+.table > tfoot > tr > td.primary,
+.table > thead > tr > th.primary,
+.table > tbody > tr > th.primary,
+.table > tfoot > tr > th.primary,
+.table > thead > tr.primary > td,
+.table > tbody > tr.primary > td,
+.table > tfoot > tr.primary > td,
+.table > thead > tr.primary > th,
+.table > tbody > tr.primary > th,
+.table > tfoot > tr.primary > th {
+  background-color: #6aa6d6;
+  border-color: rgba(0,0,0,0.3);
+  color: #f8f8f8;
+}
+
+/* line 864 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-success,
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active,
+.progress-bar-success,
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  background-color: #63cc9e;
+  border-color: rgba(0,0,0,0.3);
+  color: #f8f8f8;
+}
+
+/* line 870 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-info,
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active,
+.progress-bar-info,
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+  background-color: #7bc5d3;
+  border-color: rgba(0,0,0,0.3);
+  color: #f8f8f8;
+}
+
+/* line 876 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-warning,
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active,
+.progress-bar-warning,
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+  background-color: #dfd271;
+  border-color: rgba(0,0,0,0.3);
+  color: #f8f8f8;
+}
+
+/* line 882 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-danger,
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active,
+.progress-bar-danger,
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+  background-color: #d15e5e;
+  border-color: rgba(0,0,0,0.3);
+  color: #f8f8f8;
+}
+
+/* line 888 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #525252;
+  background-color: #b8b8b8;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 893 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary,
+.table-hover > tbody > tr > td.primary:hover,
+.table-hover > tbody > tr > th.primary:hover,
+.table-hover > tbody > tr.primary:hover > td,
+.table-hover > tbody > tr.primary:hover > th {
+  color: #fff;
+  background-color: #5a8db6;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 899 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success,
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr.success:hover > th {
+  color: #fff;
+  background-color: #54ae86;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 905 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info,
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr.info:hover > th {
+  color: #fff;
+  background-color: #69a8b4;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 911 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning,
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr.warning:hover > th {
+  color: #fff;
+  background-color: #beb360;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 917 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger,
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr.danger:hover > th {
+  color: #fff;
+  background-color: #b25050;
+  border-color: rgba(0,0,0,0.3);
+}
+
+/* line 923 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress {
+  overflow: visible;
+}
+
+/* line 926 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-ui {
+  height: 10px;
+}
+
+/* line 929 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar {
+  border-radius: 4px;
+}
+
+/* line 934 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar.ui-widget-content {
+  background: none;
+  border: 0;
+  height: 100%;
+  position: relative;
+}
+
+/* line 940 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar .ui-state-default {
+  border-radius: 4px;
+  height: 10px;
+  width: 10px;
+  top: 0;
+  margin-left: -5px;
+  cursor: pointer;
+  border: 0px solid #d3d3d3;
+  outline: none !important;
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dfdfdf);
+}
+
+/* line 958 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar .ui-widget-header {
+  background: #d8d8d8;
+}
+
+/* line 961 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-primary .ui-widget-header {
+  background: #6aa6d6;
+  color: #f8f8f8;
+}
+
+/* line 965 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-success .ui-widget-header {
+  background: #63cc9e;
+  color: #f8f8f8;
+}
+
+/* line 969 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-info .ui-widget-header {
+  background: #7bc5d3;
+  color: #f8f8f8;
+}
+
+/* line 973 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-warning .ui-widget-header {
+  background: #dfd271;
+  color: #f8f8f8;
+}
+
+/* line 977 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-danger .ui-widget-header {
+  background: #d15e5e;
+  color: #f8f8f8;
+}
+
+/* line 981 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar .ui-state-default {
+  background: #b8b8b8;
+}
+
+/* line 984 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-primary .ui-state-default {
+  background: #5a8db6;
+}
+
+/* line 987 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-success .ui-state-default {
+  background: #54ae86;
+}
+
+/* line 990 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-info .ui-state-default {
+  background: #69a8b4;
+}
+
+/* line 993 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-warning .ui-state-default {
+  background: #beb360;
+}
+
+/* line 996 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar-danger .ui-state-default {
+  background: #b25050;
+}
+
+/* line 999 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.slider-range-min-amount,
+.slider-range-max-amount,
+.slider-range-amount {
+  border: 0;
+  background: none;
+  outline: none !important;
+}
+
+/* line 1004 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar.ui-slider-vertical {
+  width: 20px;
+}
+
+/* line 1007 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.progress-bar.ui-slider-vertical .ui-state-default {
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  top: auto;
+  margin-left: 0px;
+  left: 0;
+}
+
+/* line 1017 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#equalizer .progress {
+  height: 160px;
+  display: inline-block;
+  margin: 15px;
+}
+
+/* line 1022 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.beauty-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 1027 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.beauty-table input {
+  border: 1px solid transparent;
+  background: none;
+  font-size: 16px;
+  text-align: center;
+  padding: 2px 15px !important;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+}
+
+/* line 1039 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.beauty-table input:focus {
+  border: 1px solid #dfdfdf;
+  background: #fefefe;
+  font-size: 16px;
+  text-align: center;
+  padding: 2px 15px !important;
+  width: 100%;
+  outline: none;
+}
+
+/* line 1048 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.c {
+  color: #999;
+  display: block;
+}
+
+/* line 1052 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nt {
+  color: #2f6f9f;
+}
+
+/* line 1055 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.na {
+  color: #4f9fcf;
+}
+
+/* line 1058 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.s {
+  color: #d44950;
+}
+
+/* line 1061 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.radio,
+.checkbox,
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+}
+
+/* line 1064 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.radio label,
+.checkbox label,
+.radio-inline label,
+.checkbox-inline label {
+  font-weight: normal;
+  cursor: pointer;
+  padding-left: 8px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* line 1073 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 10px;
+}
+
+/* line 1076 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* line 1080 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.checkbox i,
+.checkbox-inline i,
+.radio i,
+.radio-inline i {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* line 1091 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.checkbox i.small,
+.checkbox-inline i.small,
+.radio i.small,
+.radio-inline i.small {
+  font-size: 18px;
+  top: 2px;
+}
+
+/* line 1095 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.checkbox input[type=checkbox]:checked + i:before,
+.checkbox-inline input[type=checkbox]:checked + i:before {
+  content: "\f046";
+}
+
+/* line 1098 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.radio input[type=radio]:checked + i:before,
+.radio-inline input[type=radio]:checked + i:before {
+  content: "\f192";
+}
+
+/* line 1101 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch {
+  position: relative;
+  width: 60px;
+}
+
+/* line 1105 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch input {
+  display: none;
+}
+
+/* line 1108 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* line 1116 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 1124 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-inner:before,
+.toggle-switch-inner:after {
+  float: left;
+  width: 50%;
+  height: 20px;
+  padding: 0;
+  line-height: 20px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #fff;
+  color: #929292;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+/* line 1143 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-inner:before {
+  content: "ON";
+  padding-left: 15px;
+  border-radius: 20px 0 0 20px;
+}
+
+/* line 1150 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-inner:after {
+  content: "OFF";
+  padding-right: 15px;
+  text-align: right;
+  border-radius: 0 20px 20px 0;
+}
+
+/* line 1158 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-switch {
+  width: 20px;
+  margin: 0;
+  border: 2px solid #d8d8d8;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  color: #f8f8f8;
+  line-height: 1em;
+  text-shadow: 0 0px 1px #adadad;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dfdfdf);
+}
+
+/* line 1184 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch input:checked + .toggle-switch-inner {
+  margin-left: 0;
+}
+
+/* line 1187 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  right: 0px;
+}
+
+/* line 1190 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-danger input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border: 2px solid #d15e5e;
+  background: #d15e5e;
+}
+
+/* line 1194 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-warning input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border: 2px solid #dfd271;
+  background: #dfd271;
+}
+
+/* line 1198 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-info input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border: 2px solid #7bc5d3;
+  background: #7bc5d3;
+}
+
+/* line 1202 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-success input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border: 2px solid #63cc9e;
+  background: #63cc9e;
+}
+
+/* line 1206 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.toggle-switch-primary input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border: 2px solid #6aa6d6;
+  background: #6aa6d6;
+}
+
+/* line 1210 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.select2-container {
+  width: 100%;
+}
+
+/* line 1213 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.select2-container .select2-choice {
+  height: 30px;
+}
+
+/* line 1216 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob-slider {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* line 1223 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob-slider > div {
+  display: inline-block !important;
+}
+
+/* line 1226 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob-slider input {
+  outline: none !important;
+}
+
+/* line 1229 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ipod {
+  background: #dedede;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* line 1234 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob-clock {
+  text-align: center;
+}
+
+/* line 1237 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob-clock > div {
+  font-size: 50px;
+  text-align: center;
+  color: #a2a2a2;
+}
+
+/* line 1242 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.knob {
+  border: 0;
+  background: 0;
+}
+
+/* line 1246 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing:hover {
+  box-shadow: 0 0 5px #525252;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 1253 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .row-fluid > div {
+  padding: 18px 15px 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+}
+
+/* line 1258 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .row-fluid.centered > div {
+  background-color: #f5f5f5;
+  padding: 8px;
+  text-align: center;
+}
+
+/* line 1263 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .row-fluid.centered > div:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* line 1266 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .box-header {
+  height: 80px;
+  padding: 10px 0;
+}
+
+/* line 1270 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .box-name {
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* line 1274 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.box-pricing .box-name:hover {
+  cursor: inherit;
+}
+
+/* line 1277 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#messages #breadcrumb {
+  margin-bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 1283 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#messages-menu {
+  position: fixed;
+  top: 90px;
+  background: #a5a5a5;
+  margin: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+/* line 1291 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#messages-list {
+  margin-top: 40px;
+  padding: 0;
+}
+
+/* line 1295 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-list-message {
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 15px 15px 25px;
+  margin: 0;
+}
+
+/* line 1301 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-list-message .checkbox {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* line 1306 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-list-message .message-title {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+}
+
+/* line 1311 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-list-message .message-date {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  background: #d8d8d8;
+  padding: 0;
+  width: 50px;
+  border-radius: 2px;
+  color: #000;
+}
+
+/* line 1328 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.form-control {
+  height: 26px;
+  padding: 2px 12px;
+}
+
+/* line 1332 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.input-lg {
+  height: 39px;
+}
+
+/* line 1335 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.input-sm {
+  height: 18px;
+}
+
+/* line 1338 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-default {
+  background: #d8d8d8 !important;
+}
+
+/* line 1341 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-primary {
+  background: #6aa6d6 !important;
+  color: #f8f8f8 !important;
+}
+
+/* line 1345 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-success {
+  background: #63cc9e !important;
+  color: #f8f8f8 !important;
+}
+
+/* line 1349 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-info {
+  background: #7bc5d3 !important;
+  color: #f8f8f8 !important;
+}
+
+/* line 1353 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-warning {
+  background: #dfd271 !important;
+  color: #f8f8f8 !important;
+}
+
+/* line 1357 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.bg-danger {
+  background: #d15e5e !important;
+  color: #f8f8f8 !important;
+}
+
+/* line 1361 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-default {
+  color: #d8d8d8 !important;
+}
+
+/* line 1364 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-primary {
+  color: #6aa6d6 !important;
+}
+
+/* line 1367 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-success,
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+  color: #63cc9e !important;
+}
+
+/* line 1370 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-info {
+  color: #7bc5d3 !important;
+}
+
+/* line 1373 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-warning,
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+  color: #dfd271 !important;
+}
+
+/* line 1376 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.txt-danger,
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #d15e5e !important;
+}
+
+/* line 1379 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-success .form-control {
+  border-color: #63cc9e;
+}
+
+/* line 1382 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-warning .form-control {
+  border-color: #dfd271;
+}
+
+/* line 1385 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-error .form-control {
+  border-color: #d15e5e;
+}
+
+/* line 1388 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-success .form-control:focus {
+  border-color: #63cc9e;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 6px #63cc9e;
+}
+
+/* line 1393 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-warning .form-control:focus {
+  border-color: #dfd271;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 6px #dfd271;
+}
+
+/* line 1398 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-error .form-control:focus {
+  border-color: #d15e5e;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 6px #d15e5e;
+}
+
+/* line 1403 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.select2-container-multi .select2-choices {
+  min-height: 26px;
+  display: block;
+  height: 26px;
+  padding: 0 0 0 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #aaa;
+  white-space: nowrap;
+  line-height: 26px;
+  color: #444;
+  text-decoration: none;
+  border-radius: 4px;
+  background-clip: padding-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+  background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+  background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%);
+  background-image: linear-gradient(top, #fff 0%, #eee 50%);
+}
+
+/* line 1430 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.select2-container-multi .select2-choices .select2-search-field input {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1434 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.has-feedback .form-control-feedback {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+}
+
+/* line 1439 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  min-height: inherit;
+  padding-top: 0;
+}
+
+/* line 1443 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.form-horizontal .control-label {
+  padding-top: 4px;
+}
+
+/* line 1446 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.input-group-addon {
+  padding: 0px 6px;
+}
+
+/* line 1449 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.form-group .form-control,
+.form-group .input-group {
+  margin-bottom: 5px;
+}
+
+/* line 1452 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.input-group .form-control {
+  margin: 0;
+}
+
+/* line 1455 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div {
+  background: rgba(0,0,0,0.7) !important;
+  border: 0;
+}
+
+/* line 1459 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-widget-header {
+  background: rgba(0,0,0,0.2);
+  border: 0;
+  border-bottom: 1px solid #686868;
+  border-radius: 0;
+  color: #f8f8f8;
+  padding: 1px 0;
+}
+
+/* line 1469 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div.ui-widget-content {
+  color: #f8f8f8 !important;
+}
+
+/* line 1472 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-state-default,
+#ui-datepicker-div .ui-widget-content .ui-state-default,
+#ui-datepicker-div .ui-widget-header .ui-state-default {
+  background: none;
+  border: 0;
+  color: #f8f8f8;
+  text-align: center;
+}
+
+/* line 1478 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-state-hover,
+#ui-datepicker-div.ui-widget-content .ui-state-hover,
+#ui-datepicker-div .ui-widget-header .ui-state-hover,
+#ui-datepicker-div .ui-state-focus,
+#ui-datepicker-div.ui-widget-content .ui-state-focus,
+#ui-datepicker-div .ui-widget-header .ui-state-focus,
+#ui-datepicker-div .ui-state-highlight,
+#ui-datepicker-div.ui-widget-content .ui-state-highlight,
+#ui-datepicker-div .ui-widget-header .ui-state-highlight {
+  background: rgba(0,0,0,0.3) !important;
+  border: 0;
+  top: 2px;
+}
+
+/* line 1484 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-datepicker-group {
+  border-left: 1px solid #686868;
+}
+
+/* line 1487 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-datepicker-group:first-child {
+  border-left: 0;
+}
+
+/* line 1490 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-datepicker-buttonpane {
+  margin: 0;
+}
+
+/* line 1493 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-datepicker-group table {
+  margin: 0 auto !important;
+}
+
+/* line 1496 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px !important;
+  cursor: pointer;
+}
+
+/* line 1500 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-datepicker .ui-datepicker-next {
+  right: 2px !important;
+  cursor: pointer;
+}
+
+/* line 1504 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-icon-circle-triangle-w {
+  background: url("../img/ui-left.png") 0 0 no-repeat !important;
+}
+
+/* line 1507 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-icon-circle-triangle-e {
+  background: url("../img/ui-right.png") 0 0 no-repeat !important;
+}
+
+/* line 1510 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-icon-circle-arrow-s {
+  background: url("../img/ui-accordion-down.png") 0 0 no-repeat !important;
+}
+
+/* line 1513 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-icon-circle-arrow-e {
+  background: url("../img/ui-accordion-right.png") 0 0 no-repeat !important;
+}
+
+/* line 1516 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-slider-horizontal {
+  background: rgba(0,0,0,0.5);
+  height: 4px;
+  border: 0;
+}
+
+/* line 1521 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ui-datepicker-div .ui-slider-horizontal .ui-slider-handle {
+  background: #d8d8d8 !important;
+  border: 1px solid #f8f8f8;
+  height: 8px;
+  width: 8px;
+  top: -2px;
+  margin-left: -4px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 1531 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-spinner-input {
+  margin: 0;
+}
+
+/* line 1534 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-spinner .form-control {
+  margin-bottom: 0;
+}
+
+/* line 1537 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#tabs.ui-widget-content,
+#tabs .ui-widget-header {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 1545 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#tabs .ui-widget-header {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/* line 1548 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#tabs .ui-state-default,
+#tabs.ui-widget-content .ui-state-default,
+#tabs .ui-widget-header .ui-state-default {
+  border: 0;
+  margin: 0 0 -1px 0;
+  background: none !important;
+}
+
+/* line 1553 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#tabs .ui-state-active,
+#tabs.ui-widget-content .ui-state-active,
+#tabs .ui-widget-header .ui-state-active {
+  background: none !important;
+}
+
+/* line 1556 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+  cursor: pointer;
+}
+
+/* line 1559 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1563 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 5px 15px;
+  outline: none !important;
+}
+
+/* line 1567 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+  background: #fcfcfc;
+  border: 1px solid #d8d8d8;
+  border-bottom: 0;
+}
+
+/* line 1572 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
+}
+
+/* line 1575 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-tabs .ui-tabs-panel {
+  padding: 1em 0;
+}
+
+/* line 1578 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-widget {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 1581 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.jqstooltip {
+  box-sizing: content-box;
+  border: 0 !important;
+  text-align: center !important;
+  margin: 0px !important;
+  width: 50px;
+  border-radius: 4px;
+  padding: 0px;
+}
+
+/* line 1594 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion .ui-accordion-header {
+  padding: 6px 12px;
+  margin: 0;
+  top: 0;
+  border-radius: 0;
+}
+
+/* line 1602 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion .ui-accordion-icons {
+  padding-left: 28px;
+}
+
+/* line 1605 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion-header.ui-state-default {
+  background: #f5f5f5 !important;
+  border: 1px solid #fcfcfc;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* line 1611 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion-header.ui-state-hover,
+.ui-accordion-header.ui-state-focus {
+  background: #ebebeb !important;
+}
+
+/* line 1614 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion-header.ui-state-active {
+  background: #d8d8d8 !important;
+}
+
+/* line 1617 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ui-accordion .ui-accordion-content {
+  padding: 10px 12px;
+  background: none;
+  border: 1px solid #d8d8d8;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+/* line 1627 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#simple_gallery {
+  text-align: center;
+}
+
+/* line 1630 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#simple_gallery a.fancybox {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 1634 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#simple_gallery a.fancybox img {
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #979797;
+  border-radius: 2px;
+}
+
+/* line 1642 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#simple_gallery a.fancybox img:hover {
+  box-shadow: 0 0 10px #c7c7c7;
+}
+
+/* line 1645 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.justifiedGallery {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 1649 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.jg-row {
+  position: relative;
+  white-space: nowrap;
+}
+
+/* line 1653 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.justifiedGallery .jg-image {
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0;
+}
+
+/* line 1659 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.justifiedGallery .jg-image a {
+  text-decoration: none;
+}
+
+/* line 1662 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.justifiedGallery .jg-image img {
+  border: none;
+}
+
+/* line 1665 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.justifiedGallery .jg-image-label {
+  white-space: normal;
+  font: normal 12px arial;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 5px 5px 10px 8px;
+  text-align: left;
+  opacity: 0;
+}
+
+/* line 1677 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ex-tooltip {
+  position: absolute;
+  display: none;
+  z-index: 2000;
+}
+
+/* line 1682 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+
+/* line 1686 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.morris-hover.morris-default-style,
+.ex-tooltip {
+  border-radius: 4px;
+  padding: 6px 20px;
+  color: #525252;
+  background: rgba(255,255,255,0.8);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* line 1696 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+
+/* line 1700 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0;
+}
+
+/* line 1704 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard-header {
+  margin-bottom: 20px;
+}
+
+/* line 1707 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links {
+  padding: 0;
+}
+
+/* line 1710 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav {
+  background: #3575a0 url("../img/devoops_pattern_b10.png") 0 0 repeat;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+}
+
+/* line 1717 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav-stacked > li {
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1726 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav-pills > li > a {
+  color: #f8f8f8;
+  display: block;
+  padding: 20px 10px 20px 15px;
+  border-radius: 0;
+  outline: none;
+}
+
+/* line 1735 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav-pills > li.active {
+  border-top-color: rgba(0,0,0,0.11);
+  position: relative;
+  margin: 0;
+}
+
+/* line 1740 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav-pills > li.active > a,
+#dashboard_links .nav-pills > li.active > a:hover,
+#dashboard_links .nav-pills > li.active > a:focus,
+#dashboard_links .nav > li > a:hover,
+#dashboard_links .nav > li > a:focus {
+  background: rgba(0,0,0,0.1);
+}
+
+/* line 1743 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_links .nav-pills > li.active > a:before {
+  font-family: FontAwesome;
+  content: "\f0da";
+  position: absolute;
+  left: -2px;
+  font-size: 30px;
+  color: #f8f8f8;
+}
+
+/* line 1751 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard_tabs {
+  background: #f8f8f8;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 1757 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard-overview {
+  padding-bottom: 15px;
+}
+
+/* line 1760 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.sparkline-dashboard {
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* line 1765 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.sparkline-dashboard-info {
+  float: left;
+  display: block;
+  text-align: center;
+}
+
+/* line 1770 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.sparkline-dashboard-info span {
+  display: block;
+  font-weight: bold;
+  color: #b25050;
+}
+
+/* line 1775 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-marketplace {
+  margin-top: 20px;
+}
+
+/* line 1778 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server {
+  padding-top: 8px;
+  padding-bottom: 25px;
+}
+
+/* line 1782 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server:hover {
+  background: #e7e7e7;
+}
+
+/* line 1785 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server .page-header {
+  padding-bottom: 3px;
+}
+
+/* line 1788 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server h4 i {
+  position: absolute;
+  left: 15px;
+}
+
+/* line 1792 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server small {
+  position: absolute;
+  right: 15px;
+  top: 51px;
+}
+
+/* line 1797 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server-bottom {
+  margin-top: 25px;
+}
+
+/* line 1800 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server-bottom .knob-slider {
+  font-size: 11px;
+}
+
+/* line 1803 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-server-footer {
+  overflow: hidden;
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 1809 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-settings {
+  position: absolute;
+  top: 7px;
+  left: 40px;
+  display: none;
+}
+
+/* line 1815 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-settings a {
+  color: #525252;
+}
+
+/* line 1818 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.ow-server:hover .ow-settings {
+  display: block;
+}
+
+/* line 1821 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-server-footer a {
+  display: block;
+  padding: 10px 0;
+  border-left: 1px solid #f8f8f8;
+  text-decoration: none;
+}
+
+/* line 1827 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-server-footer a:first-child {
+  border-left: 0;
+}
+
+/* line 1830 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-server-footer span {
+  display: block;
+}
+
+/* line 1833 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.m-table > thead > tr > th,
+.m-table > tbody > tr > th,
+.m-table > tfoot > tr > th,
+.m-table > thead > tr > td,
+.m-table > tbody > tr > td,
+.m-table > tfoot > tr > td {
+  vertical-align: middle;
+  padding: 2px 5px;
+}
+
+/* line 1837 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.m-ticker span {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+/* line 1842 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.m-price {
+  text-align: right;
+}
+
+/* line 1845 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.m-change .fa-angle-up {
+  color: #54ae86;
+  font-weight: bold;
+}
+
+/* line 1849 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.m-change .fa-angle-down {
+  color: #b25050;
+  font-weight: bold;
+}
+
+/* line 1853 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-summary {
+  font-size: 12px;
+}
+
+/* line 1856 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-summary b {
+  float: right;
+  padding: 1px 4px;
+  margin: 1px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+}
+
+/* line 1865 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-donut {
+  margin: 0 0 20px;
+}
+
+/* line 1868 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-donut > div {
+  padding: 0;
+}
+
+/* line 1871 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-activity .row {
+  margin: 0 0 0 -15px;
+  font-size: 13px;
+}
+
+/* line 1875 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-setting {
+  border: 1px solid #c7c7c7;
+  padding: 0;
+  position: absolute;
+  width: 158px;
+  height: 28px;
+  top: 1px;
+  border-radius: 4px 4px 0 0;
+  opacity: 0;
+  right: -200px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+/* line 1892 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-marketplace:hover #ow-setting {
+  opacity: 1;
+  right: 15px;
+}
+
+/* line 1896 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-setting a {
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+  color: #d8d8d8;
+  font-size: 16px;
+  display: block;
+  line-height: 28px;
+  width: 20px;
+  height: 26px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+/* line 1911 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-setting a:hover {
+  font-size: 16px;
+  color: #222;
+  line-height: 24px;
+}
+
+/* line 1916 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-licenced {
+  margin: 20px 0;
+}
+
+/* line 1919 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-licenced .row {
+  margin: 0;
+}
+
+/* line 1922 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#ow-stat .row {
+  margin: 0;
+}
+
+/* line 1925 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard-clients .one-list-message {
+  background: none;
+  padding: 10px 15px;
+}
+
+/* line 1929 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard-clients .one-list-message:last-child {
+  border-bottom: 0;
+}
+
+/* line 1932 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#dashboard-clients .one-list-message .message-date {
+  position: relative;
+  width: auto;
+  right: auto;
+  left: 15px;
+  padding: 0 15px;
+}
+
+/* line 1939 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn + .dropdown-menu {
+  margin-top: -10px;
+  background: rgba(0,0,0,0.7) !important;
+  padding: 0;
+  border: 0;
+  right: 0;
+  left: auto;
+  min-width: 100%;
+}
+
+/* line 1946 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.btn + .dropdown-menu > li > a {
+  padding: 5px 10px !important;
+  color: #f0f0f0;
+}
+
+/* line 1950 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.v-txt {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  position: absolute;
+  top: 60px;
+  left: -20px;
+  color: #d8d8d8;
+  font-size: 18px;
+  box-shadow: 0 0 10px #d8d8d8;
+  padding: 0px 5px;
+}
+
+/* line 1962 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.full-calendar {
+  padding: 25px 0;
+  background: #fcfcfc;
+}
+
+/* line 1966 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.external-event {
+  padding: 2px 6px;
+  margin: 4px 0;
+  background: #f5f5f5;
+}
+
+/* line 1971 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.external-event:hover {
+  cursor: move;
+  background: #6aa6d6;
+  color: #f8f8f8;
+}
+
+/* line 1976 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#add-new-event {
+  background: #ebebeb;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* line 1984 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.modal-backdrop {
+  z-index: 2000;
+}
+
+/* line 1987 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.modal {
+  z-index: 2001;
+}
+
+/* line 1990 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.fc-event {
+  border: 1px solid #6aa6d6;
+  background-color: #6aa6d6;
+}
+
+/* line 1994 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-drop-area {
+  position: absolute;
+  background: #fcfcfc;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 2000 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-button {
+  float: right;
+  margin: 20px 15px 0 0;
+}
+
+/* line 2004 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-list {
+  position: relative;
+  z-index: 3;
+  margin: 60px 15px 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 2011 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-list li {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  font-size: 12px;
+  background: rgba(245,245,245,0.9);
+}
+
+/* line 2021 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-settings {
+  opacity: 0;
+  visibility: hidden;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 7px 0;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 2038 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-list li:hover .qq-upload-settings {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 2042 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-list li img {
+  border: 1px solid #b4b4b4;
+  margin-bottom: 5px;
+}
+
+/* line 2046 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-filename {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 2050 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-upload-file,
+.qq-upload-size,
+.qq-upload-status-text {
+  display: block;
+}
+
+/* line 2053 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-dropped-zone {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  margin-left: -71px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 2061 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.qq-dropped-zone i {
+  font-size: 5em;
+  display: block;
+  color: #f5f5f5;
+  text-shadow: 0 -1px 1px #d8d8d8;
+}
+
+/* line 2067 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-500 h1,
+.page-404 h1 {
+  font-size: 5em;
+}
+
+/* line 2070 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-404 .form-inline {
+  margin: 40px auto;
+  width: 60%;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 4px;
+}
+
+/* line 2079 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-404 .input-group-btn:last-child > .btn,
+.page-404 .input-group-btn:last-child > .btn-group {
+  margin-left: -1px;
+  margin-bottom: 0;
+  height: 39px;
+}
+
+/* line 2084 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-500 h3,
+.page-404 h3 {
+  margin: 5px 0 20px;
+}
+
+/* line 2087 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: #ebebeb;
+  z-index: 2000;
+}
+
+/* line 2095 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.devoops-getdata {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #ebebeb;
+}
+
+/* line 2101 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-500,
+#page-login {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 2106 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-500 {
+  background: #ebebeb;
+}
+
+/* line 2109 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-500 img {
+  display: block;
+  margin: 30px auto;
+}
+
+/* line 2113 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-login .logo {
+  position: absolute;
+}
+
+/* line 2116 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-login h3 {
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+}
+
+/* line 2120 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-login .text-right {
+  margin-top: 15px;
+}
+
+/* line 2123 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#page-login .box {
+  margin-top: 15%;
+}
+
+/* line 2126 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-result {
+  margin-top: 20px;
+}
+
+/* line 2129 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.one-result p {
+  margin: 0;
+}
+
+/* line 2132 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.large {
+  font-size: 1.25em;
+}
+
+/* line 2135 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.nav-search > li.active > a {
+  background: #f0f0f0;
+  border-radius: 4px;
+  color: #525252;
+  border-bottom: 1px solid #cecece;
+  font-weight: bold;
+}
+
+/* line 2144 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-feed .avatar {
+  width: 60px;
+  float: left;
+  margin: 10px 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 2151 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-feed .avatar img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #f8f8f8;
+}
+
+/* line 2156 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-feed-content {
+  position: relative;
+  padding: 3px 15px 5px;
+  background: #fcfcfc;
+  margin-left: 90px;
+  min-height: 80px;
+}
+
+/* line 2163 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-feed-content small.time {
+  font-style: italic;
+}
+
+/* line 2166 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.page-feed .page-feed-content:before {
+  font-family: FontAwesome;
+  content: "\f0d9";
+  position: absolute;
+  left: -10px;
+  top: 15px;
+  font-size: 30px;
+  color: #fcfcfc;
+}
+
+/* line 2175 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.likebox {
+  overflow: hidden;
+}
+
+/* line 2178 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.likebox .navbar-nav {
+  margin: 0;
+}
+
+/* line 2181 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.likebox .navbar-nav li {
+  margin-right: 15px;
+  float: left;
+}
+
+/* line 2185 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.likebox .fa-thumbs-up {
+  color: #6aa6d6;
+}
+
+/* line 2188 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.likebox .fa-thumbs-down {
+  color: #d15e5e;
+}
+
+/* line 2191 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#modalbox {
+  display: none;
+  position: fixed;
+  overflow: auto;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5000;
+  background: rgba(0,0,0,0.8);
+}
+
+/* line 2203 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#modalbox .devoops-modal {
+  position: absolute;
+  top: 90px;
+  margin-left: -300px;
+  left: 50%;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0 0 20px #6aa6d6;
+  background: transparent;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  width: 600px;
+  z-index: 6000;
+}
+
+/* line 2215 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#modalbox .devoops-modal-header {
+  color: #363636;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e4e4e4;
+  height: 28px;
+}
+
+/* line 2224 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#modalbox .devoops-modal-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  background: #fcfcfc;
+}
+
+/* line 2230 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#modalbox .devoops-modal-bottom {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  background: #d8d8d8;
+}
+
+/* line 2236 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 4px 10px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  color: #969696;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  border: 1px solid #d8d8d8;
+}
+
+/* line 2247 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #8a8a8a;
+  background-color: #eee;
+}
+
+/* line 2251 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #979797;
+  cursor: not-allowed;
+  background-color: #fcfcfc;
+  border-color: #d8d8d8;
+}
+
+/* line 2257 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #6aa6d6;
+  border-color: #6aa6d6;
+}
+
+/* line 2264 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.fancybox-nav {
+  position: fixed;
+  width: 50%;
+}
+
+/* line 2268 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.fancybox-close {
+  position: fixed;
+  top: 20px;
+  right: 36px;
+  background: url("../img/times.png") 0 0 no-repeat;
+}
+
+/* line 2274 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.fancybox-prev span {
+  left: 21px;
+  background: url("../img/chevron-left.png") 0 0 no-repeat;
+}
+
+/* line 2278 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+.fancybox-next span {
+  right: 36px;
+  background: url("../img/chevron-right.png") 0 0 no-repeat;
+}
+
+/* line 2282 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#social a {
+  margin: 10px 3px;
+  color: #666;
+  display: block;
+  float: left;
+}
+
+/* line 2288 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+#event_delete {
+  margin-left: 20px;
+}
+
+/* line 2291 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+@media (min-width: 768px) {
+
+/* line 2292 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #sidebar-left.col-sm-2 {
+    opacity: 1;
+    width: 16.666666666666664%;
+    padding: 0 15px;
+  }
+
+/* line 2297 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .sidebar-show #sidebar-left.col-sm-2 {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+  }
+
+/* line 2302 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .sidebar-show #content.col-sm-10 {
+    opacity: 1;
+    width: 100%;
+  }
+
+/* line 2306 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .page-404 .form-inline {
+    width: 60%;
+  }
+}
+
+/* line 2310 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+@media (min-width: 992px) {
+
+/* line 2311 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .nav.main-menu > li > a,
+  .nav.msg-menu > li > a {
+    text-align: left;
+  }
+
+/* line 2314 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .nav.main-menu > li > a > i,
+  .nav.msg-menu > li > a > i {
+    font-size: 14px;
+    width: 20px;
+    display: inline-block;
+  }
+
+/* line 2319 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .main-menu .dropdown-menu {
+    position: relative;
+    z-index: inherit;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(0,0,0,0.2);
+    visibility: visible;
+  }
+
+/* line 2330 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .main-menu .dropdown-menu > li > a {
+    border-radius: 0 !important;
+  }
+
+/* line 2335 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .page-404 .form-inline {
+    width: 40%;
+  }
+}
+
+/* line 2339 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+@media (max-width: 767px) {
+
+/* line 2340 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #main {
+    margin-top: 100px;
+  }
+
+/* line 2343 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #messages-menu {
+    top: 140px;
+  }
+
+/* line 2346 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .page-404 .form-inline {
+    width: 100%;
+  }
+
+/* line 2349 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav {
+    border-radius: 4px 4px 0 0;
+  }
+
+/* line 2354 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav-stacked > li {
+    float: left;
+  }
+
+/* line 2357 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav-pills > li > a {
+    padding: 15px;
+  }
+
+/* line 2360 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav-pills > li.active > a:before {
+    bottom: 0;
+    left: 50%;
+    margin-left: -9px;
+  }
+}
+
+/* line 2366 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+@media (max-width: 620px) {
+
+/* line 2367 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .user-mini {
+    display: none;
+  }
+}
+
+/* line 2371 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+@media (max-width: 400px) {
+
+/* line 2372 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .panel-menu a.account {
+    padding: 5px 0px 5px 0;
+  }
+
+/* line 2375 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .avatar {
+    margin: 0;
+  }
+
+/* line 2378 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .panel-menu i.pull-right {
+    margin-left: 0;
+  }
+
+/* line 2381 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus {
+    background: none;
+  }
+
+/* line 2384 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav-stacked > li {
+    float: none;
+  }
+
+/* line 2387 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+  #dashboard_links .nav-pills > li.active > a:before {
+    display: none;
+  }
+}
+
+/* line 2392 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* line 2395 : /Users/mvielmetter/Arbeit/Haushaltsbuch/src/styl/main.styl */
+input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden !important;
 }
