@@ -31257,3 +31257,12 @@ Apache CouchDB has started. Time to relax.
 [info] [<0.31108.0>] 127.0.0.1 - - GET /user%2Fso7thm3/_changes?since=1&include_docs=true&feed=normal 200
 [info] [<0.31114.0>] 127.0.0.1 - - GET /user%2Fhoiuczu/_changes?since=6&include_docs=true&feed=normal 200
 [info] [<0.31120.0>] 127.0.0.1 - - GET /user%2Fso7thm3/_changes?since=1&include_docs=true&feed=normal 200
+[info] [<0.31076.0>] 127.0.0.1 - - GET /?hoodieId=hoiuczu 200
+[info] [<0.31126.0>] 127.0.0.1 - - GET /?hoodieId=hoiuczu 200
+[info] [<0.30607.0>] 127.0.0.1 - - GET /user%2Fhoiuczu/_changes?since=6&include_docs=true&feed=normal 200
+[info] [<0.31132.0>] 127.0.0.1 - - GET /user%2Fso7thm3/_changes?since=1&include_docs=true&feed=normal 200
+[info] [<0.31140.0>] 127.0.0.1 - - GET /user%2Fhoiuczu/_changes?since=6&include_docs=true&feed=normal 200
+[info] [<0.31146.0>] 127.0.0.1 - - GET /user%2Fso7thm3/_changes?since=1&include_docs=true&feed=normal 200
+[info] [<0.31152.0>] 127.0.0.1 - - GET /user%2Fhoiuczu/_changes?since=6&include_docs=true&feed=normal 200
+Apache CouchDB has been shutdown.
+Apache CouchDB has been shutdown.
