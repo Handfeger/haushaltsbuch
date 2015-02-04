@@ -64,7 +64,7 @@ App::error(function(Exception $exception, $code)
 
 App::down(function()
 {
-	return Response::make("Be right back!", 503);
+	return Response::make("Lets maintain ourselves for a brief moment!", 503);
 });
 
 /*
