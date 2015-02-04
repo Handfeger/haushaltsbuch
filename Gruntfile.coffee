@@ -4,119 +4,107 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
 
-  # Gotta clean up befor you do stuff :]
+    # Gotta clean up befor you do stuff :]
     clean:
-         dev:
-           src: 'www/**'
-           styles:
-           src: 'www/assets/css/**/*.css'
-           scripts:
-           src: 'www/assets/js/**/*.js'
+      dev:
+        src: 'public/assets/**'
+      styles:
+        src: 'public/assets/css/**/*.css'
+      scripts:
+        src: 'public/assets/js/**/*.js'
 
-  # Copy Html (Maybe templating engine later)
+    # Copy Html (Maybe templating engine later)
     copy:
-         html:
-           expand: yes
-           cwd: 'src/html'
-           src: ['**']
-           dest: 'www'
-           images:
-           expand: yes
-             cwd: 'src/img'
-             src: ['**']
-             dest: 'www/assets/img'
-           vendor:
-           expand: yes
-             cwd: 'vendor'
-             src: ['**']
-             dest: 'www/assets/vendor'
-           'scripts.dev':
-           expand: yes
-             cwd: 'src/coffee'
-             src: ['**'],
-             dest: 'www/dev/coffee',
+      html:
+        expand: yes
+        cwd:    'src/html'
+        src:    ['**']
+        dest:   'public/assets'
+      images:
+        expand: yes
+        cwd:  'src/img'
+        src:  ['**']
+        dest: 'public/assets/img'
+      vendor:
+        expand: yes
+        cwd:  'src/vendor'
+        src:  ['**']
+        dest: 'public/assets/vendor'
+      'scripts.dev':
+        expand: yes
+        cwd:  'src/coffee'
+        src:  ['**'],
+        dest: 'public/dev/coffee',
 
-  # Vendor: Install bower packages
+    # Vendor: Install bower packages
     bower:
-         dev:
-           options:
-             layout: 'byType'
-             targetDir: 'www/assets/vendor'
-             bowerOptions:
-               production: yes
-
-
-
-  # Lets Style
-    stylus:
-         dev:
-           options:
-                 linenos: yes
-             compress: no
-           files:[
-             expand: true
-             cwd: 'src/styl'
-             src: ['**/*.styl']
-             dest: 'www/assets/css'
-             ext: '.css'
-           ]
-
-  # Lets Style our style
-    autoprefixer:
-         build:
-           expand: yes
-           cwd: 'www/assets/css'
-           src: ['**/*.css']
-           dest: 'www/assets/css'
-
-    cssmin:
       dev:
         options:
-          banner: "/* DEV BUILD*/\n#{banner}"
-          keepSpecialComments: '*'
-        files:
-          'www/assets/css/style.css': ['www/assets/css/**/*.css']
+          layout:    'byType'
+          targetDir: 'www/assets/vendor'
+          bowerOptions:
+            production: yes
+
+
+
+    # Lets Style
+    stylus:
+      dev:
+        options:
+          linenos: yes
+          compress: no
+        files: [
+          expand: true
+          cwd:    'src/styl'
+          src:    ['**/*.styl']
+          dest:   'www/assets/css'
+          ext:    '.css'
+        ]
+
+    # Lets Style our style
+    autoprefixer:
+      build:
+        expand: yes
+        cwd:    'www/assets/css'
+        src:    ['**/*.css']
+        dest:   'www/assets/css'
 
     coffee:
       dev:
         options:
-                sourceMap: yes
+          sourceMap: yes
         expand: yes
-        cwd: 'www/dev/coffee'
-        src: [ '**/*.coffee' ],
-        dest: 'www/assets/js',
-        ext: '.js'
+        cwd:    'www/dev/coffee'
+        src:    ['**/*.coffee'],
+        dest:   'www/assets/js',
+        ext:    '.js'
 
     uglify:
       prod:
         options:
-          mangle: false
-          banner: banner
+          mangle:    false
+          banner:    banner
           sourceMap: no
         files:
           'www/assets/js/application.js': ['www/assets/js/**/*.js']
-            'www/assets/vendor/vendor.js': ['www/assets/vendor/vendor.js']
+          'www/assets/vendor/vendor.js': ['www/assets/vendor/vendor.js']
 
     concat:
-      'vendor.beforeHoodie':
-        src: [
+      vendor:
+        src:  [
           'www/assets/vendor/jquery/*.js'
           'www/assets/vendor/angular/*.js'
           'www/assets/vendor/angular-translate/*.js'
           'www/assets/vendor/ng-table/*.js'
           'www/assets/vendor/bootstrap/*.js'
           'www/assets/vendor/raphael/*.js'
-        ]
-        dest: 'www/assets/vendor/vendor.before.js'
-      'vendor.afterHoodie':
-        src: [
           'www/assets/vendor/js/*.js'
         ]
-          dest: 'www/assets/vendor/vendor.after.js'
+        dest: 'www/assets/vendor/vendor.js'
       dev:
         options:
           sourceMap: no
-          files:
+        files:
           'www/assets/js/application.js': ['www/assets/js/**/*.js']
 
     watch:
@@ -125,13 +113,12 @@ module.exports = (grunt) ->
         tasks: ['styles:dev']
       scripts:
         files: ['src/coffee/**/*.coffee']
-          tasks: ['scripts:dev']
+        tasks: ['scripts:dev']
       html:
         files: ['src/html/**']
-          tasks: ['copy:html']
+        tasks: ['copy:html']
 
 
-  #grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
@@ -149,8 +136,7 @@ module.exports = (grunt) ->
       'styles:dev'
       'copy:prod'
       'scripts:dev'
-      'concat:vendor.beforeHoodie'
-      'concat:vendor.afterHoodie'
+      'concat:vendor'
     ]
 
   grunt.registerTask 'scripts:dev', [
@@ -165,7 +151,6 @@ module.exports = (grunt) ->
     'clean:styles'
     'stylus:dev'
     'autoprefixer'
-    'cssmin:dev'
   ]
 
   grunt.registerTask 'copy:prod', [
