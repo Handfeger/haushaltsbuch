@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('Rufus.fritz.box'),
+	'local' => ['Rufus.fritz.box', 'Rufus.local'],
 
 ));
 

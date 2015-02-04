@@ -9,7 +9,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		Redirect::route('/');
 	}
 
 
