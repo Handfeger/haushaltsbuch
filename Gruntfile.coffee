@@ -7,7 +7,9 @@ module.exports = (grunt) ->
     # Gotta clean up befor you do stuff :]
     clean:
       dev:
-        src: 'public/assets/**'
+        src: ['public/assets/**', 'public/dev']
+      prod:
+        src: 'public/dev'
       styles:
         src: 'public/assets/css/**/*.css'
       scripts:

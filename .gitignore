@@ -15,3 +15,7 @@ composer.lock
 .env.php
 Thumbs.db
 /_ide_helper.php
+
+## Assets
+/public/assets
+/public/dev
