@@ -1,6 +1,6 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "Account Book",
+	"description": "An account book to split money between Persons",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
