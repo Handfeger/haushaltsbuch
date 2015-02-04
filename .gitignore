@@ -1,5 +1,17 @@
+## System Specifics && Development
+
 .idea
 node_modules
 /bower_components/
 .DS_Store
 ._*
+
+## Laravel here we come
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
