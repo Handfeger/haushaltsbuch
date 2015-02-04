@@ -41,7 +41,7 @@ module.exports = (grunt) ->
       dev:
         options:
           layout:    'byType'
-          targetDir: 'www/assets/vendor'
+          targetDir: 'public/assets/vendor'
           bowerOptions:
             production: yes
 
@@ -57,7 +57,7 @@ module.exports = (grunt) ->
           expand: true
           cwd:    'src/styl'
           src:    ['**/*.styl']
-          dest:   'www/assets/css'
+          dest:   'public/assets/css'
           ext:    '.css'
         ]
 
@@ -65,18 +65,18 @@ module.exports = (grunt) ->
     autoprefixer:
       build:
         expand: yes
-        cwd:    'www/assets/css'
+        cwd:    'public/assets/css'
         src:    ['**/*.css']
-        dest:   'www/assets/css'
+        dest:   'public/assets/css'
 
     coffee:
       dev:
         options:
           sourceMap: yes
         expand: yes
-        cwd:    'www/dev/coffee'
+        cwd:    'public/dev/coffee'
         src:    ['**/*.coffee'],
-        dest:   'www/assets/js',
+        dest:   'public/assets/js',
         ext:    '.js'
 
     uglify:
@@ -86,26 +86,26 @@ module.exports = (grunt) ->
           banner:    banner
           sourceMap: no
         files:
-          'www/assets/js/application.js': ['www/assets/js/**/*.js']
-          'www/assets/vendor/vendor.js': ['www/assets/vendor/vendor.js']
+          'public/assets/js/application.js': ['public/assets/js/**/*.js']
+          'public/assets/vendor/vendor.js':  ['public/assets/vendor/vendor.js']
 
     concat:
       vendor:
         src:  [
-          'www/assets/vendor/jquery/*.js'
-          'www/assets/vendor/angular/*.js'
-          'www/assets/vendor/angular-translate/*.js'
-          'www/assets/vendor/ng-table/*.js'
-          'www/assets/vendor/bootstrap/*.js'
-          'www/assets/vendor/raphael/*.js'
-          'www/assets/vendor/js/*.js'
+          'public/assets/vendor/jquery/*.js'
+          'public/assets/vendor/angular/*.js'
+          'public/assets/vendor/angular-translate/*.js'
+          'public/assets/vendor/ng-table/*.js'
+          'public/assets/vendor/bootstrap/*.js'
+          'public/assets/vendor/raphael/*.js'
+          'public/assets/vendor/js/*.js'
         ]
-        dest: 'www/assets/vendor/vendor.js'
+        dest: 'public/assets/vendor/vendor.js'
       dev:
         options:
           sourceMap: no
         files:
-          'www/assets/js/application.js': ['www/assets/js/**/*.js']
+          'public/assets/js/application.js': ['public/assets/js/**/*.js']
 
     watch:
       styles:
