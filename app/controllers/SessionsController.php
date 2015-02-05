@@ -9,7 +9,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		Redirect::route('/');
+		return Redirect::to('/');
 	}
 
 
@@ -21,7 +21,7 @@ class SessionsController extends \BaseController {
 	public function create()
 	{
 		if (Auth::check()) {
-			Redirect::route('/');
+			return Redirect::to('/');
 		}
 		return View::make('sessions.create');
 	}
@@ -34,11 +34,15 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		if (Auth::attempt(Input::only('email', 'password'))) {
-			Redirect::route('/');
+		if (Auth::check()) {
+			return Redirect::to('/');
 		}
 
-		Redirect::back()->withInput();
+		if (Auth::attempt(Input::only('email', 'password'), true)) {
+			return Redirect::intended('/');
+		}
+
+		return Redirect::back()->withInput()->withErrors(['email' => 'Email and Password do not match']);
 	}
 
 
@@ -52,7 +56,7 @@ class SessionsController extends \BaseController {
 	{
 		Auth::logout();
 
-		Redirect::route('/login');
+		return Redirect::to('login');
 	}
 
 

@@ -71,6 +71,14 @@ module.exports = (grunt) ->
         src:    ['**/*.css']
         dest:   'public/assets/css'
 
+    cssmin:
+      dev:
+        options:
+          banner: "/* DEV BUILD*/\n#{banner}"
+          keepSpecialComments: '*'
+        files:
+          'public/assets/css/style.css': ['public/assets/css/**/*.css']
+
     coffee:
       dev:
         options:
@@ -129,6 +137,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-concat'
 
   grunt.registerTask 'build.dev',
@@ -153,6 +162,7 @@ module.exports = (grunt) ->
     'clean:styles'
     'stylus:dev'
     'autoprefixer'
+    'cssmin:dev'
   ]
 
   grunt.registerTask 'copy:prod', [
