@@ -26,7 +26,7 @@ app = angular.module 'entry', []
 app.directive 'newEntry', () ->
   {
   restrict: 'E'
-  templateUrl: 'new-entry.html'
+  templateUrl: 'assets/new-entry.html'
   controller: ->
     @add = ->
       @entry.addDate = new Date()
@@ -60,8 +60,8 @@ app.directive 'newEntry', () ->
 app.directive 'allEntries', () ->
   {
   restrict: 'E'
-  templateUrl: 'entries.html'
-  controller: ['$scope', 'hoodieArray', 'hoodieAccount', ($scope, hoodieArray, hoodieAccount)->
+  templateUrl: 'assets/entries.html'
+  controller: ->
     hoodieArray.bind $scope, 'entries', 'entry'
     @difference = 0
     @posDif = 0
@@ -115,6 +115,5 @@ app.directive 'allEntries', () ->
         {value: pos, label: 'du', format: 'current'}
         {value: neg, label: 'andere'}
       ]
-  ]
   controllerAs: 'entryCtrl'
   }

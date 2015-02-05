@@ -20,7 +20,7 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		if (Auth::guest()) {
-			return Redirect::to('/login');
+			return Redirect::route('sessions.login');
 		}
 
 		return User::all();
@@ -52,7 +52,7 @@ class UsersController extends \BaseController {
 		$this->user->fill(Input::all());
 
 		if ($this->user->save()) {
-			return Redirect::to('/login');
+			return Redirect::route('sessions.login');
 		}
 
 		dd($this->user->getErrors());
@@ -70,7 +70,7 @@ class UsersController extends \BaseController {
 	public function show($id)
 	{
 		if (Auth::guest()) {
-			return Redirect::to('/login');
+			return Redirect::route('sessions.login');
 		}
 
 		return $this->loadUser($id);

@@ -31,12 +31,12 @@
 
                                         <div class="user-mini pull-right">
                                             <span class="welcome">Moin moin,</span>
-                                            <span>{{appCtrl.account.username}}</span>
+                                            <span>{{ Auth::user()->name }}</span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a ng-click="appCtrl.logout()" href="#">
+                                            <a href="{{ route('sessions.logout') }}">
                                                 <i class="fa fa-power-off"></i>
                                                 <span>Logout</span>
                                             </a>

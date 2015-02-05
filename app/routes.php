@@ -10,7 +10,10 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', 'HomeController@index')->before('auth');
+Route::get('/', [
+    'uses' => 'HomeController@index',
+    'as' => 'root',
+    ])->before('auth');
 Route::post('/', function () {
     return Redirect::to('/');
 });
@@ -23,8 +26,8 @@ Route::post('/', function () {
 | Here are all the Routes needed for Users and Sessions
 |
 */
-Route::get('login', 'SessionsController@create');
-Route::get('logout', 'SessionsController@destroy');
+Route::get('login', ['as' => 'sessions.login','uses' => 'SessionsController@create']);
+Route::get('logout', ['as' => 'sessions.logout', 'uses' => 'SessionsController@destroy']);
 Route::resource('sessions', 'SessionsController');
-Route::get('register', 'UsersController@create');
+Route::get('register', ['as' => 'sessions.register', 'uses' => 'UsersController@create']);
 Route::resource('users', 'UsersController');
