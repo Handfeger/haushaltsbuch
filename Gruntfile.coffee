@@ -82,7 +82,7 @@ module.exports = (grunt) ->
     coffee:
       dev:
         options:
-          sourceMap: yes
+          sourceMap: no
         expand: yes
         cwd:    'public/dev/coffee'
         src:    ['**/*.coffee'],
@@ -105,9 +105,11 @@ module.exports = (grunt) ->
           'public/assets/vendor/jquery/*.js'
           'public/assets/vendor/angular/*.js'
           'public/assets/vendor/angular-translate/*.js'
+          'public/assets/vendor/angular-resource/*.js'
           'public/assets/vendor/ng-table/*.js'
           'public/assets/vendor/bootstrap/*.js'
           'public/assets/vendor/raphael/*.js'
+          'public/assets/vendor/morris.js/*.js'
           'public/assets/vendor/js/*.js'
         ]
         dest: 'public/assets/vendor/vendor.js'
