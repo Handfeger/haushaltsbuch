@@ -68,7 +68,7 @@ app.directive 'allEntries', () ->
     @delete = (entry) ->
       idx = $scope.entries.indexOf entry
       $scope.entries.splice(idx, 1);
-      Entry.delete({entryId: entry.id}).then =>
+      Entry.delete({entryId: entry.id}).$promise.then =>
         @update()
 
     @getShare = (entry) ->
@@ -93,14 +93,17 @@ app.directive 'allEntries', () ->
         unless entry.shared
           return
 
+        console.log entry.price
         if entry.owned
-          pos += entry.price
+          pos += new Number entry.price
         else
-          neg += entry.price
+          neg += new Number entry.price
 
       @posDif = pos
       @negDif = neg
       @difference = (pos - neg) / 2
+
+      console.log pos
 
       @netChart.setData [
         {value: pos, label: 'du', format: 'current'}

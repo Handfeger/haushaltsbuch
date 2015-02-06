@@ -11,13 +11,6 @@
                 <div id="top-panel" class="col-xs-12 col-sm-10">
                     <div class="row">
                         <div class="col-xs-10 col-sm-10">
-                            <a href="#" class="show-sidebar">
-                                <i class="fa fa-bars"></i>
-                            </a>
-
-                            <div id="search">
-                                <new-entry></new-entry>
-                            </div>
                         </div>
                         <div class="col-xs-4 col-sm-2 top-panel-right">
                             <ul class="nav navbar-nav pull-right panel-menu">
@@ -64,7 +57,6 @@
                     </li>
                 </ul>
                 <footer class="container">
-                    <h6>Entwickelt mit <a href="http://hood.ie">Hoodie!</a></h6>
                 </footer>
             </div>
             <!--Start Content-->
