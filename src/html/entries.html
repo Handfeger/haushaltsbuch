@@ -27,7 +27,7 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="entry in entries | orderBy:price">
-                        <td>{{entry.date | date}}</td>
+                        <td>{{entry.entry_date | date}}</td>
                         <td>{{entry.price | currency}}</td>
                         <td>{{entry.subject}}</td>
                         <td>{{entry.user.name}}</td>

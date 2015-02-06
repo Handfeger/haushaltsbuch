@@ -81,7 +81,6 @@ app.directive 'allEntries', () ->
         return 0 - (entry.price / 2)
 
     @update = ->
-      console.log Entry.query()
       $scope.entries = Entry.query()
       $scope.entries.$promise.then =>
         @updateDifference()
