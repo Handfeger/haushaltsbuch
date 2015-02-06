@@ -13,7 +13,18 @@
 
 App::before(function($request)
 {
-	//
+	/*
+	|--------------------------------------------------------------------------
+	| Force SSL in Prod Env
+	|--------------------------------------------------------------------------
+	|
+	| We always want https on our Production Env
+	| YES WE DO!
+	|
+	*/
+	if (App::environment() !== 'local' && !Request::secure()) {
+		return Redirect::secure(Request::path(), 301);
+	}
 });
 
 
