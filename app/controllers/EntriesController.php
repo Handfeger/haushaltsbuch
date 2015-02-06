@@ -35,7 +35,7 @@ class EntriesController extends \BaseController {
 		$entry = new Entry(Input::all());
 
 		if ($entry->save()) {
-			return Response::json([], 201, [
+			return Response::json($entry, 201, [
 				'Location' => route('entry.show', ['id' => $entry->id,]),
 			]);
 		} else {
