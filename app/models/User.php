@@ -58,4 +58,9 @@ class User extends \Handfeger\Database\Model implements UserInterface, Remindabl
                 return NULL;
             });
     }
+
+    public function entries()
+    {
+        return $this->hasMany('Entry');
+    }
 }

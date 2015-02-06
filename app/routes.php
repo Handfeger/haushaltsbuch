@@ -31,3 +31,18 @@ Route::get('logout', ['as' => 'sessions.logout', 'uses' => 'SessionsController@d
 Route::resource('sessions', 'SessionsController');
 Route::get('register', ['as' => 'sessions.register', 'uses' => 'UsersController@create']);
 Route::resource('users', 'UsersController');
+
+/*
+|--------------------------------------------------------------------------
+| REST Things
+|--------------------------------------------------------------------------
+|
+| All the rest of the application
+|
+*/
+
+Route::group([
+    'before' => 'auth',
+], function () {
+    Route::resource('entry', 'EntriesController');
+});

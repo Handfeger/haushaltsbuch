@@ -30,7 +30,7 @@
                         <td>{{entry.date | date}}</td>
                         <td>{{entry.price | currency}}</td>
                         <td>{{entry.subject}}</td>
-                        <td>{{entry.user}}</td>
+                        <td>{{entry.user.name}}</td>
                         <td>{{entryCtrl.getShare(entry) | currency}}</td>
                         <td ng-click="entryCtrl.delete(entry)"><i class="fa fa-trash-o"></i></td>
                     </tr>
