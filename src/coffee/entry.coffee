@@ -27,22 +27,30 @@ app.directive 'newEntry', () ->
   restrict: 'E'
   templateUrl: 'assets/new-entry.html'
   controller: ['$scope', ($scope) ->
+    tmpDate = new Date()
+    @day = tmpDate.getDate()
+    @month = tmpDate.getMonth() + 1
+    @year = tmpDate.getFullYear() - 2000
+
     @add = ->
+      tmpDate.setYear @year + 2000
+      tmpDate.setMonth @month - 1, @day
+      @entry.entry_date = tmpDate
       $scope.$emit 'entry.addNew', @entry
 
+
       @entry = @newEntry(@entry)
+      console.log $scope.newEntryForm.price
 
     @newEntry = (entry)->
       if !entry
         return {
           subject: 'Essen'
-          entry_date: new Date()
           shared: yes
         }
       else
         return {
           subject: 'Essen'
-          entry_date: entry.entry_date
           shared: entry.shared
         }
 

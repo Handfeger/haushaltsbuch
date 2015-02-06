@@ -9,7 +9,7 @@ class EntriesController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::json(Entry::all());
+		return Response::json(Entry::belonging()->get());
 	}
 
 
@@ -59,6 +59,10 @@ class EntriesController extends \BaseController {
 			return Response::json([], 404);
 		}
 
+		if (!$entry->hasAccess) {
+			return Response::json(['error' => 'Unauthorized',], 401);
+		}
+
 		return Response::json($entry);
 	}
 
@@ -90,6 +94,10 @@ class EntriesController extends \BaseController {
 			return Response::json(['error' => 'Not Found!',], 404);
 		}
 
+		if (!$entry->hasAccess) {
+			return Response::json(['error' => 'Unauthorized',], 401);
+		}
+
 		$entry->fill(Input::all());
 
 		if ($entry->save()) {
@@ -113,6 +121,10 @@ class EntriesController extends \BaseController {
 
 		if (!$entry) {
 			return Response::json(['error' => 'Not Found!',], 404);
+		}
+
+		if (!$entry->hasAccess) {
+			return Response::json(['error' => 'Unauthorized',], 401);
 		}
 
 		if ($entry->delete()) {

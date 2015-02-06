@@ -61,4 +61,21 @@ class Entry extends \Handfeger\Database\Model
         return $this->user->id == Auth::user()->id;
     }
 
+    /**
+     * Set the scope to entries that the user actually can show
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeBelonging($query)
+    {
+
+        return $query->whereUserId(Auth::user()->id)->orWhere('shared', '=', 1);
+    }
+
+    public function getHasAccessAttribute()
+    {
+        return $this->owned || $this->shared;
+    }
 }
