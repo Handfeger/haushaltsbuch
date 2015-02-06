@@ -55,8 +55,8 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'mvielmet_haushalt',
-			'username'  => 'mvielmet_haushalt',
+			'database'  => 'mvielmet_accountbook',
+			'username'  => 'accountbook',
 			'password'  => $_ENV['DB_PASSWORD'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
